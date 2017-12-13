@@ -1,0 +1,22 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  tags: /tags
+  About: /about
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+# - /css/normalize.css
+- https://unpkg.com/purecss@1.0.0/build/pure-min.css
+- /css/microb.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/microb.js

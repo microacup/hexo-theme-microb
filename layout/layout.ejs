@@ -1,0 +1,76 @@
+
+<%
+var pageTitle = page.title || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+if (is_home()) pageTitle+= config.subtitle;
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title><%=pageTitle%></title>
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from config.yml -->
+    <% theme.stylesheets.forEach(function(url) { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+</head>
+<body>
+
+  <nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+    <a class="pure-menu-heading" href="/">
+      <h1 class="title"><%=config.title%></h1>
+      <!-- <span><%=config.subtitle%></span> -->
+    </a>
+    <img class="logo" id="logo" src="data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QNiaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9IkE4NDhFMzNEMDQ4MjdEMjhDNzdGNUVFNzJFQzgwRDFGIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjZBMEYyRTc3REZEQTExRTc4NzJEQTVCMEFDRDU5OEIyIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjZBMEYyRTc2REZEQTExRTc4NzJEQTVCMEFDRDU5OEIyIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3NTYwMjVhMC04OTFkLTZmNDQtODFjYy1kZWQ5ZWNkZTA0NWYiIHN0UmVmOmRvY3VtZW50SUQ9IkE4NDhFMzNEMDQ4MjdEMjhDNzdGNUVFNzJFQzgwRDFGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hw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" alt="logo">
+    <ul class="pure-menu-list float-r">
+      <% Object.keys(theme.menu).forEach(function(key) { %>
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="<%=theme.menu[key]%>"><%=key%></a>
+        </li>
+      <% }); %>
+    </ul>      
+  </nav>
+  <div class="container" id="content-outer">
+    <div class="inner" id="content-inner">
+      <%- body %>
+    </div>
+
+    <% if (page.total > 1){ %>
+      <nav class="page-nav text-center">
+          <%- paginator({
+            prev_text: '&lt;', 
+            mid_size: 1,
+            next_text: '&gt;'}) %>
+      </nav>
+    <% } %>
+
+  </div>
+
+  <footer class="footer text-center">
+    <div id="bottom-inner">
+      <a href="http://blog.meiqiu.me" target="_blank"><%=config.title%></a> |
+      <a href="http://hexo.io" target="_blank">hexo</a> |
+      <a href="http://meiqiu.me" target="_blank">主站</a> |
+      <a href="https://xiao.meiqiu.me" target="_blank">小煤球</a> |
+      <a href="https://github.com/microacup" target="_blank">GitHub</a>
+    </div>
+  </footer>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <!-- scripts list from theme config.yml -->
+  <% theme.scripts.forEach(function(url) { %>
+    <script src="<%=url%>"></script>
+  <% }); %>
+<% } %>
+
+</body>
+</html>

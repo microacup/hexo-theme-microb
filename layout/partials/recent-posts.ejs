@@ -1,0 +1,29 @@
+
+<% if (page.posts.length > 0) { %>
+  <div class="recent-posts">
+    <% page.posts.sort('date', -1).limit(10).each(function(post) { %>
+      <article class="recent-post-item">
+        <a class="title" href="<%=config.root + post.path%>"><h2><%=post.title%></h2></a>
+        <% if (post.excerpt) { %>
+          <div class="post-excerpt">
+            <%- post.excerpt %>
+          </div>
+        <% } %>
+        
+        <div class="post-footer">
+          <% if (post.tags) { %>
+            <% post.tags.each(function(tag) { %>
+              <a class="tag" href="<%-url_for('/tags/' + tag.name)%>"><%=tag.name%></a>
+            <% }); %>
+          <% } %>
+
+          <% if (post.date) { %>
+            <time class="time pr" datetime="<%=post.date.toJSON()%>">
+              <%=date(post.date)%>
+            </time>
+          <% } %>
+        </div>
+      </article>
+    <% }); %>
+  </div>
+<% } %>

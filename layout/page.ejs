@@ -1,0 +1,24 @@
+<article class="post page" id="page">
+  <header class="post-header text-center">
+    <h1 class="title">
+      <%=page.title%>
+    </h1>
+    <hr>
+  </header>
+  <div class="post-content">
+    <% if (page.type === "tags"){ %>
+          <% if (site.tags.length){ %>
+                <%- list_tags() %>
+          <% } %>
+
+        <!-- <% site.tags.sort('name').each(function(tag) { %>
+          <a class="tag-item" href="<%-url_for('/tags/' + tag.name)%>">
+                    <span class="tag-name"><%= tag.name%></span>
+                    <span class="tag-size">( <%= tag.length %> )</span>
+                  </a>
+          <% }); %> -->
+      <% } else { %>
+        <%-page.content%>
+      <% } %>
+  </div>
+</article>

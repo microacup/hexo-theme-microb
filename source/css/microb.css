@@ -1,0 +1,453 @@
+.text-center {
+  text-align: center !important;
+}
+blockquote,
+body,
+dd,
+dl,
+fieldset,
+figure,
+menu,
+ol,
+pre,
+ul {
+  margin: 0;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2,
+h3 {
+  font-size: 1.2em;
+}
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.5em 0;
+  line-height: 1.5em;
+}
+a {
+  color: #555;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  outline: none;
+  text-decoration: none;
+  color: #555;
+}
+.pr {
+  position: absolute !important;
+  right: 0;
+}
+.float-r {
+  float: right;
+}
+footer {
+  border-top: 1px solid #eee;
+  padding-bottom: 1rem!important;
+  padding-top: 1rem!important;
+  margin-top: 1rem!important;
+  color: #ccc;
+  font-size: 12px;
+}
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+.highlight {
+  display: block;
+  overflow-x: auto;
+  color: #555;
+  font-size: 14px;
+  border-radius: 2px;
+  background-color: #f7f7f7;
+  overflow-y: hidden;
+  margin: 20px 0;
+}
+.highlight .line {
+  height: 20px;
+}
+.highlight code,
+.highlight pre {
+  font-size: 0.9em;
+  background-color: #f8f8f8;
+  font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+}
+.highlight .gutter pre {
+  padding: 10px;
+  color: #869194;
+  background-color: #eff2f3;
+  text-align: center;
+}
+.highlight .code pre {
+  padding: 10px;
+}
+.highlight .comment,
+.highlight .meta {
+  color: #b3b3b3;
+}
+.highlight .string,
+.highlight .value,
+.highlight .variable,
+.highlight .template-variable,
+.highlight .strong,
+.highlight .emphasis,
+.highlight .quote,
+.highlight .inheritance,
+.highlight .ruby .symbol,
+.highlight .xml .cdata {
+  color: #1abc9c;
+}
+.highlight .keyword,
+.highlight .selector-tag,
+.highlight .type,
+.highlight .javascript .function {
+  color: #e96900;
+}
+.highlight .preprocessor,
+.highlight .built_in,
+.highlight .params,
+.highlight .constant,
+.highlight .symbol,
+.highlight .bullet,
+.highlight .attribute,
+.highlight .css .hexcolor {
+  color: #1abc9c;
+}
+.highlight .number,
+.highlight .literal {
+  color: #ae81ff;
+}
+.highlight .section,
+.highlight .header,
+.highlight .name,
+.highlight .function,
+.highlight .python .decorator,
+.highlight .python .title,
+.highlight .ruby .function .title,
+.highlight .ruby .title .keyword,
+.highlight .perl .sub,
+.highlight .javascript .title,
+.highlight .coffeescript .title {
+  color: #525252;
+}
+.highlight .tag,
+.highlight .regexp {
+  color: #2973b7;
+}
+.highlight .title,
+.highlight .attr,
+.highlight .selector-id,
+.highlight .selector-class,
+.highlight .selector-attr,
+.highlight .selector-pseudo,
+.highlight .ruby .constant,
+.highlight .xml .tag .title,
+.highlight .xml .pi,
+.highlight .xml .doctype,
+.highlight .html .doctype,
+.highlight .css .id,
+.highlight .css .pseudo,
+.highlight .class,
+.highlight .ruby .class .title {
+  color: #2973b7;
+}
+.highlight .css .code .attribute {
+  color: #e96900;
+}
+.highlight .css .class {
+  color: #525252;
+}
+.highlight .tag .attribute {
+  color: #e96900;
+}
+.highlight .addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+.highlight .deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+.highlight .link {
+  text-decoration: underline;
+}
+.highlight .function .keyword {
+  color: #0092db;
+}
+.highlight .function .params {
+  color: #525252;
+}
+.highlight .function .title {
+  color: #525252;
+}
+.tag-button {
+  font-size: 12px;
+  line-height: 30px;
+  display: inline-block;
+  height: 30px;
+  margin: 5px 3px;
+  padding: 0 12px;
+  color: #999;
+  border-radius: 15px;
+  background: #f6f6f6;
+}
+.tag-button:hover {
+  color: #555;
+  background: #efefef;
+}
+body {
+  color: #555;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8em;
+  font-weight: 300;
+  font-family: 'Microsoft Yahei UI Light', 'Microsoft YaHei', 'Source Sans Pro', sans-serif;
+}
+.home-menu {
+  background: white;
+  height: 46px;
+  padding: 5px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+}
+@media screen and (max-width: 576px) {
+  .home-menu {
+    padding: 5px;
+  }
+}
+.home-menu .pure-menu-heading {
+  padding: 0;
+  position: relative;
+}
+.home-menu img {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.home-menu .title {
+  color: #202020;
+  margin: 0 5px;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 24px;
+}
+.home-menu .logo {
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 6px;
+  margin-left: -16px;
+}
+@media screen and (max-width: 576px) {
+  .home-menu .logo {
+    display: none;
+  }
+}
+.container {
+  padding-top: 46px;
+  margin: 0 auto;
+  max-width: 960px;
+}
+.container .inner {
+  padding: 0 5px;
+}
+.recent-posts {
+  margin-top: 0 10px 10px;
+}
+.recent-post-item {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  border-top: none;
+}
+.recent-post-item .post-excerpt {
+  color: #999;
+}
+@media screen and (max-width: 576px) {
+  .recent-post-item .post-excerpt {
+    display: none;
+  }
+}
+.recent-post-item .post-footer {
+  font-size: 12px;
+  margin-top: 10px;
+  position: relative;
+  padding-right: 60px;
+}
+.recent-post-item .title {
+  line-height: 1.8em;
+}
+.recent-post-item .title h2 {
+  font-size: 1.2em;
+}
+@media screen and (max-width: 576px) {
+  .recent-post-item .title h2 {
+    font-size: 1em;
+    font-weight: normal;
+  }
+}
+.recent-post-item .title:hover {
+  color: #3c8dbc;
+}
+.recent-post-item .tag {
+  margin-right: 5px;
+  color: #999;
+  padding: 2px 5px;
+  background-color: #f6f6f6;
+  border-radius: 2px;
+}
+.recent-post-item .tag:hover {
+  background-color: #efefef;
+}
+.recent-post-item .time {
+  color: #999;
+}
+.page-nav {
+  margin: 12px 0 0;
+  padding: 10px 0 10px;
+}
+.page-nav .page-number {
+  border-bottom: 1px solid #eee;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+  margin: 0 10px;
+  padding: 0 11px;
+}
+.page-nav .page-number:hover {
+  border-bottom-color: #222;
+}
+.page-nav .page-number.current {
+  color: #fff;
+  background: #ccc;
+  border-top-color: #ccc;
+}
+.post {
+  padding: 0 10px;
+}
+.post .post-header {
+  margin: 20px 0 30px;
+}
+.post hr {
+  width: 10%;
+}
+.post blockquote {
+  padding: 1em;
+  margin: 1em 0;
+  padding-left: 20px;
+  border-left: 4px solid #ccc;
+  background-color: #efefef;
+}
+.post table {
+  max-width: 100%;
+}
+.post img {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  max-height: 1024px;
+}
+.post .post-content .note {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+}
+.post .post-content .note.primary {
+  border-left-color: #6f42c1;
+}
+.post .post-content .note.info {
+  border-left-color: #428bca;
+}
+.post .post-content .note.success {
+  border-left-color: #5cb85c;
+}
+.post .post-content .note.warning {
+  border-left-color: #f0ad4e;
+}
+.post .post-content .note.danger {
+  border-left-color: #d9534f;
+}
+.post .post-tags {
+  text-align: center;
+  margin: 20px 0;
+}
+.post .post-tags .article-tag-list-item {
+  font-size: 12px;
+  line-height: 30px;
+  display: inline-block;
+  height: 30px;
+  margin: 5px 3px;
+  padding: 0 12px;
+  color: #999;
+  border-radius: 15px;
+  background: #f6f6f6;
+}
+.post .post-tags .article-tag-list-item:hover {
+  color: #555;
+  background: #efefef;
+}
+.page hr {
+  width: 10%;
+}
+.page li {
+  padding: .25em 0;
+}
+.page .tag-list .tag-list-item {
+  font-size: 12px;
+  line-height: 30px;
+  display: inline-block;
+  height: 30px;
+  margin: 5px 3px;
+  padding: 0 12px;
+  color: #999;
+  border-radius: 15px;
+  background: #f6f6f6;
+}
+.page .tag-list .tag-list-item:hover {
+  color: #555;
+  background: #efefef;
+}
+.page .tag-list .tag-list-item .tag-list-link {
+  font-weight: 500;
+  margin-right: 5px;
+}
+.tag-page .tag-item {
+  padding: .5em 0;
+}
+.tag-page .tag-item time {
+  color: #999;
+  font-size: 12px;
+  float: right;
+}
+
+/*# sourceMappingURL=microb.css.map */
