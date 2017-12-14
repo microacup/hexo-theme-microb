@@ -12,9 +12,10 @@
         
         <div class="post-footer">
           <% if (post.tags) { %>
-            <% post.tags.each(function(tag) { %>
-              <a class="tag" href="<%-url_for('/tags/' + tag.name)%>"><%=tag.name%></a>
-            <% }); %>
+            <%- list_tags(post.tags, {
+              show_count: false,
+              class: 'index-tag'
+            }) %>
           <% } %>
 
           <% if (post.date) { %>

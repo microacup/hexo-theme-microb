@@ -359,14 +359,20 @@ body {
 .recent-posts .recent-post-item .title:hover {
   color: #2196F3;
 }
-.recent-posts .recent-post-item .tag {
+.recent-posts .recent-post-item .index-tag-list {
+  display: inline;
+  padding: 0;
+}
+.recent-posts .recent-post-item .index-tag-list .index-tag-list-item {
   margin-right: 5px;
   color: #999;
   padding: 2px 5px;
   background-color: #f6f6f6;
   border-radius: 2px;
+  display: inline;
+  list-style: none;
 }
-.recent-posts .recent-post-item .tag:hover {
+.recent-posts .recent-post-item .index-tag-list .index-tag-list-item:hover {
   background-color: #efefef;
 }
 .recent-posts .recent-post-item .time {

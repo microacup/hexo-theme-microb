@@ -90,14 +90,21 @@ body {
         color: @light-blue;
       }
     }
-    .tag {
-      margin-right: 5px;
-      color: @gray-light;
-      padding: 2px 5px;
-      background-color: @bg-gray;
-      border-radius: 2px;
-      &:hover {
-        background-color: @bg-gray-hover;
+    .index-tag-list {
+      display: inline;
+      padding: 0;
+      .index-tag-list-item {
+        margin-right: 5px;
+        color: @gray-light;
+        padding: 2px 5px;
+        background-color: @bg-gray;
+        border-radius: 2px;
+        display: inline;
+        list-style: none;
+        
+        &:hover {
+          background-color: @bg-gray-hover;
+        }
       }
     }
     .time {
