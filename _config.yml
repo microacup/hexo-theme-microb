@@ -1,6 +1,6 @@
 
 # html lang
-language: en
+language: zh-Hans
 
 # main menu navigation
 menu:
@@ -10,7 +10,7 @@ menu:
   about: /about
 
 # Miscelaneous
-favicon: /favicon.ico
+favicon: /logo.png
 
 # stylesheets loaded in the <head>
 stylesheets:
