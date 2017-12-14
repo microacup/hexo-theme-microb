@@ -2,7 +2,6 @@
 @import "variables.less";
 @import "highlight.less";
 @import "mixin.less";
-
 body {
   color: @gray;
   margin: 0;
@@ -16,8 +15,8 @@ body {
   background: white;
   height: @nav-height;
   padding: @nav-padding;
-  border-bottom: 1px solid rgba(32,32,32,.2);
-  @media screen and (max-width: 576px) {
+  border-bottom: 1px solid rgba(32, 32, 32, .2);
+  @media screen and (max-width: @sm-width) {
     padding: @nav-small-padding;
   }
   .pure-menu-heading {
@@ -42,8 +41,7 @@ body {
     left: 50%;
     top: @logo-top;
     margin-left: -16px;
-
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: @sm-width) {
       display: none;
     }
   }
@@ -52,63 +50,57 @@ body {
 .container {
   padding-top: @padding-top;
   margin: 0 auto;
-  max-width: 888px;
-
-  @media screen and (min-width: 1440px) {
-    max-width: 960px;
-  }
-
-  .inner {
-    padding: 0 5px;
+  max-width: 1000px;
+  @media screen and (min-width: @xl-width) {
+    max-width: 1200px;
   }
 }
 
 .recent-posts {
   margin: 0 auto;
-  max-width: 760px;
-}
-
-.recent-post-item {
-  padding: 10px;
-  border-bottom: 1px solid #f0f0f0;
-  border-top: none;
-  .post-excerpt {
-    color: @gray-light;
-    @media screen and (max-width: 576px) {
-      display: none;
-    }
-  }
-  .post-footer {
-    font-size: 12px;
-    margin-top: 10px;
-    position: relative;
-    padding-right: 60px;
-  }
-  .title {
-    line-height: 1.8em;
-    h2 {
-      font-size: 1.2em;
-      @media screen and (max-width: 576px) {
-        font-size: 1em;
-        font-weight: normal;
+  max-width: @index-width;
+  .recent-post-item {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    border-top: none;
+    .post-excerpt {
+      color: @gray-light;
+      @media screen and (max-width: @sm-width) {
+        display: none;
       }
     }
-    &:hover {
-      color: @light-blue;
+    .post-footer {
+      font-size: 12px;
+      margin-top: 10px;
+      position: relative;
+      padding-right: 60px;
     }
-  }
-  .tag {
-    margin-right: 5px;
-    color: @gray-light;
-    padding: 2px 5px;
-    background-color: @bg-gray;
-    border-radius: 2px;
-    &:hover {
-      background-color: @bg-gray-hover;
+    .title {
+      line-height: 1.8em;
+      h2 {
+        font-size: 1.2em;
+        @media screen and (max-width: @sm-width) {
+          font-size: 1em;
+          font-weight: normal;
+        }
+      }
+      &:hover {
+        color: @light-blue;
+      }
     }
-  }
-  .time {
-    color: @gray-light;
+    .tag {
+      margin-right: 5px;
+      color: @gray-light;
+      padding: 2px 5px;
+      background-color: @bg-gray;
+      border-radius: 2px;
+      &:hover {
+        background-color: @bg-gray-hover;
+      }
+    }
+    .time {
+      color: @gray-light;
+    }
   }
 }
 
@@ -134,11 +126,7 @@ body {
 }
 
 .post {
-  padding: 10px 50px;
-  border: 1px solid #ccc;
-  border-top: none;
-  box-shadow: 0 2px 3px rgba(32,32,32,.05);
-  
+  .post-page;
   .post-header {
     margin: 10px 0 20px;
   }
@@ -186,11 +174,9 @@ body {
       }
     }
   }
-
   .post-tags {
     text-align: center;
     margin: 20px 0;
-
     .article-tag-list-item {
       .tag-button;
     }
@@ -198,14 +184,15 @@ body {
 }
 
 .page {
+  max-width: @page-width;
+  border: none;
+  box-shadow: none;
   hr {
     width: 10%;
   }
-
   li {
     padding: .25em 0;
   }
-  
   .tag-list {
     .tag-list-item {
       .tag-button;
@@ -218,13 +205,66 @@ body {
 }
 
 .tag-page {
+  .post-page;
+  border: none !important;
+  box-shadow: none !important;
   .tag-item {
     padding: .5em 0;
-
     time {
       color: @gray-light;
       font-size: 12px;
       float: right;
     }
+  }
+}
+
+.toc-article {
+  display: none;
+}
+
+.post-nav {
+  display: block;
+  margin-top: 15px;
+  margin: 0 auto;
+  max-width: @post-width;
+  .post-nav-item {
+    display: inline-block;
+    padding: 10px 0 0 0;
+    width: 50%;
+    vertical-align: top;
+    position: relative;
+    span {
+      display: inline-block;
+      position: absolute;
+    }
+    a {
+      margin-left: 20px;
+      display: inline-block;
+    }
+  }
+  .post-nav-prev {
+    text-align: right;
+    a {
+      margin-right: 20px;
+    }
+    span {
+      right: 0;
+    }
+  }
+  @media screen and (max-width: @sm-width) {
+    display: none;
+  }
+}
+
+.toc-article {
+  display: none;
+  position: fixed;
+  top: 50px;
+  font-size: 13px;
+  width: 200px;
+  padding: 10px 10px 0 0;
+  margin-left: -40px;
+  @media screen and (min-width: @xl-width) {
+    display: block;
   }
 }

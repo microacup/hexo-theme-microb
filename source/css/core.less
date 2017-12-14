@@ -2,10 +2,18 @@
   text-align: center !important;
 }
 
-blockquote, body, dd, dl, fieldset, figure, menu, ol, pre, ul {
+* {
+ box-sizing: border-box;
+}
+
+blockquote, body, fieldset, figure, menu,  pre, ol, ul, dd, dl {
   margin: 0;
-  white-space: pre-wrap;
+  padding: 0;
   word-wrap: break-word;
+}
+
+ol, ul, dd, dl {
+  padding-left: 1em;
 }
 
 h1 {
@@ -50,7 +58,7 @@ footer {
   border-top: 1px solid #eee;
   padding-bottom: 1.5rem!important;
   padding-top: 1.5rem!important;
-  margin-top: 2rem!important;
+  margin-top: 1rem!important;
   color: #ccc;
   font-size: 12px;
 }
@@ -79,4 +87,9 @@ footer {
   background-color: rgba(0,0,0,.3);
   -webkit-box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
   box-shadow: inset 1px 1px 0 rgba(0,0,0,.1);
+}
+
+::selection {
+  background: #64B5F6;
+  color: #fff;
 }

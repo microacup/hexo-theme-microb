@@ -1,5 +1,9 @@
 (function(window, document, undefined) {
   document.onreadystatechange = function() {
+    if (document.readyState !== 'complete') {
+      return;
+    }
+
     var timer = null;
 
     function returnTop() {
