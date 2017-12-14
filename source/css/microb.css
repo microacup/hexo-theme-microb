@@ -258,7 +258,7 @@ footer {
 }
 @media screen and (min-width: 880px) {
   .post-page {
-    border: 1px solid #ccc;
+    border: 1px solid rgba(32, 32, 32, 0.15);
     border-top: none;
     box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
   }
@@ -275,7 +275,7 @@ body {
   background: white;
   height: 50px;
   padding: 5px 20px;
-  border-bottom: 1px solid rgba(32, 32, 32, 0.2);
+  border-bottom: 1px solid rgba(32, 32, 32, 0.15);
 }
 @media screen and (max-width: 576px) {
   .home-menu {
@@ -327,7 +327,7 @@ body {
 }
 .recent-posts .recent-post-item {
   padding: 10px;
-  border-bottom: 1px solid #f0f0f0;
+  border-bottom: 1px solid rgba(32, 32, 32, 0.05);
   border-top: none;
 }
 .recent-posts .recent-post-item .post-excerpt {
@@ -412,7 +412,7 @@ body {
 }
 @media screen and (min-width: 880px) {
   .post {
-    border: 1px solid #ccc;
+    border: 1px solid rgba(32, 32, 32, 0.15);
     border-top: none;
     box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
   }
@@ -526,7 +526,7 @@ body {
 }
 @media screen and (min-width: 880px) {
   .tag-page {
-    border: 1px solid #ccc;
+    border: 1px solid rgba(32, 32, 32, 0.15);
     border-top: none;
     box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
   }
@@ -587,7 +587,7 @@ body {
   font-size: 13px;
   width: 200px;
   padding: 10px 10px 0 0;
-  margin-left: -40px;
+  margin-left: 1060px;
 }
 @media screen and (min-width: 1280px) {
   .toc-article {

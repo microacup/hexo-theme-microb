@@ -15,7 +15,7 @@ body {
   background: white;
   height: @nav-height;
   padding: @nav-padding;
-  border-bottom: 1px solid rgba(32, 32, 32, .2);
+  border-bottom: 1px solid @border-dark-gray;
   @media screen and (max-width: @sm-width) {
     padding: @nav-small-padding;
   }
@@ -63,7 +63,7 @@ body {
   max-width: @index-width;
   .recent-post-item {
     padding: 10px;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid @border-gray;
     border-top: none;
     .post-excerpt {
       color: @gray-light;
@@ -276,7 +276,7 @@ body {
   font-size: 13px;
   width: 200px;
   padding: 10px 10px 0 0;
-  margin-left: -40px;
+  margin-left: 1060px;
   @media screen and (min-width: @xl-width) {
     display: block;
   }
