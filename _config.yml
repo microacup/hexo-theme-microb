@@ -4,9 +4,10 @@ language: en
 
 # main menu navigation
 menu:
-  Home: /
+  home: /
   tags: /tags
-  About: /about
+  search: /search
+  about: /about
 
 # Miscelaneous
 favicon: /favicon.ico
@@ -14,9 +15,10 @@ favicon: /favicon.ico
 # stylesheets loaded in the <head>
 stylesheets:
 # - /css/normalize.css
-- https://unpkg.com/purecss@1.0.0/build/pure-min.css
+- //cdn.bootcss.com/pure/1.0.0/pure-min.css
 - /css/microb.css
 
 # scripts loaded in the end of the body
 scripts:
+- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
 - /js/microb.js

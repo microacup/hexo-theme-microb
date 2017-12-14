@@ -12,6 +12,8 @@ if (is_home()) pageTitle+= config.subtitle;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="<%= config.keywords %>" />
+  <meta name="description" content="<%= config.description %>" />
   <title><%=pageTitle%></title>
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
     <!-- stylesheets list from config.yml -->

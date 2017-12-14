@@ -51,6 +51,8 @@ body {
   padding-top: @padding-top;
   margin: 0 auto;
   max-width: 1000px;
+  min-height: calc(~"100vh - 120px");
+
   @media screen and (min-width: @xl-width) {
     max-width: 1200px;
   }
@@ -273,4 +275,23 @@ body {
   display: block;
   margin: 0 auto;
   max-width: @post-width;
+}
+
+.search-content {
+  .pure-input {
+    border-radius: 2px !important;
+
+    &:focus {
+      border-color: #202020 !important;
+    }
+  }
+}
+
+.search-result-list {
+  margin-top: 10px;
+  
+  .search-result-title {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
 }

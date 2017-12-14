@@ -7,7 +7,7 @@
     <ul class="pure-menu-list float-r">
       <% Object.keys(theme.menu).forEach(function(key) { %>
         <li class="pure-menu-item">
-          <a class="pure-menu-link" href="<%=theme.menu[key]%>"><%=key%></a>
+          <a class="pure-menu-link" href="<%=theme.menu[key]%>"><%=__(key)%></a>
         </li>
       <% }); %>
     </ul>      

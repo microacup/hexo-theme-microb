@@ -63,6 +63,11 @@ a:active {
 .float-r {
   float: right;
 }
+em {
+  color: #FF5722;
+  font-weight: bold;
+  font-style: normal;
+}
 footer {
   border-top: 1px solid #eee;
   padding-bottom: 1.5rem!important;
@@ -309,6 +314,7 @@ body {
   padding-top: 50px;
   margin: 0 auto;
   max-width: 1000px;
+  min-height: calc(100vh - 120px);
 }
 @media screen and (min-width: 1280px) {
   .container {
@@ -582,6 +588,19 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 880px;
+}
+.search-content .pure-input {
+  border-radius: 2px !important;
+}
+.search-content .pure-input:focus {
+  border-color: #202020 !important;
+}
+.search-result-list {
+  margin-top: 10px;
+}
+.search-result-list .search-result-title {
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=microb.css.map */

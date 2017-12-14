@@ -17,6 +17,8 @@
                     <span class="tag-size">( <%= tag.length %> )</span>
                   </a>
           <% }); %> -->
+      <% } else if (page.type === "search") { %>
+        <%- partial('partials/search') %>
       <% } else { %>
         <%-page.content%>
       <% } %>
