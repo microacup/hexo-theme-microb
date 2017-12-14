@@ -56,9 +56,9 @@ a:active {
 }
 footer {
   border-top: 1px solid #eee;
-  padding-bottom: 1rem!important;
-  padding-top: 1rem!important;
-  margin-top: 1rem!important;
+  padding-bottom: 1.5rem!important;
+  padding-top: 1.5rem!important;
+  margin-top: 2rem!important;
   color: #ccc;
   font-size: 12px;
 }
@@ -227,15 +227,15 @@ body {
   color: #555;
   margin: 0;
   font-size: 14px;
-  line-height: 1.8em;
+  line-height: 2em;
   font-weight: 300;
   font-family: 'Microsoft Yahei UI Light', 'Microsoft YaHei', 'Source Sans Pro', sans-serif;
 }
 .home-menu {
   background: white;
-  height: 46px;
+  height: 50px;
   padding: 5px 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(32, 32, 32, 0.2);
 }
 @media screen and (max-width: 576px) {
   .home-menu {
@@ -255,15 +255,14 @@ body {
 .home-menu .title {
   color: #202020;
   margin: 0 5px;
-  vertical-align: middle;
   display: inline-block;
-  font-size: 24px;
+  line-height: 2em;
 }
 .home-menu .logo {
   cursor: pointer;
   position: absolute;
   left: 50%;
-  top: 6px;
+  top: 8px;
   margin-left: -16px;
 }
 @media screen and (max-width: 576px) {
@@ -272,15 +271,21 @@ body {
   }
 }
 .container {
-  padding-top: 46px;
+  padding-top: 50px;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 888px;
+}
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 960px;
+  }
 }
 .container .inner {
   padding: 0 5px;
 }
 .recent-posts {
-  margin-top: 0 10px 10px;
+  margin: 0 auto;
+  max-width: 760px;
 }
 .recent-post-item {
   padding: 10px;
@@ -350,10 +355,13 @@ body {
   border-top-color: #ccc;
 }
 .post {
-  padding: 0 10px;
+  padding: 10px 50px;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
 }
 .post .post-header {
-  margin: 20px 0 30px;
+  margin: 10px 0 20px;
 }
 .post hr {
   width: 10%;

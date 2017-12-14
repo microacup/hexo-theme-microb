@@ -7,7 +7,7 @@ body {
   color: @gray;
   margin: 0;
   font-size: 14px;
-  line-height: 1.8em;
+  line-height: 2em;
   font-weight: 300;
   font-family: 'Microsoft Yahei UI Light', 'Microsoft YaHei', 'Source Sans Pro', sans-serif;
 }
@@ -16,7 +16,7 @@ body {
   background: white;
   height: @nav-height;
   padding: @nav-padding;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+  border-bottom: 1px solid rgba(32,32,32,.2);
   @media screen and (max-width: 576px) {
     padding: @nav-small-padding;
   }
@@ -33,9 +33,8 @@ body {
   .title {
     color: #202020;
     margin: 0 5px;
-    vertical-align: middle;
     display: inline-block;
-    font-size: 24px;
+    line-height: 2em;
   }
   .logo {
     cursor: pointer;
@@ -53,15 +52,20 @@ body {
 .container {
   padding-top: @padding-top;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 888px;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 960px;
+  }
+
   .inner {
     padding: 0 5px;
   }
 }
 
 .recent-posts {
-  margin-top: 0 10px 10px;
-  // border-top: 1px solid #f0f0f0;
+  margin: 0 auto;
+  max-width: 760px;
 }
 
 .recent-post-item {
@@ -130,10 +134,13 @@ body {
 }
 
 .post {
-  padding: 0 10px;
+  padding: 10px 50px;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 3px rgba(32,32,32,.05);
   
   .post-header {
-    margin: 20px 0 30px;
+    margin: 10px 0 20px;
   }
   hr {
     width: 10%;
