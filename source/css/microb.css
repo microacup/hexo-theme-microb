@@ -532,7 +532,7 @@ body {
 .post-nav {
   display: block;
   margin-top: 15px;
-  margin: 0 auto;
+  margin: 10px auto;
   max-width: 880px;
 }
 .post-nav .post-nav-item {
@@ -577,6 +577,11 @@ body {
   .toc-article {
     display: block;
   }
+}
+.disqus-comments {
+  display: block;
+  margin: 0 auto;
+  max-width: 880px;
 }
 
 /*# sourceMappingURL=microb.css.map */
