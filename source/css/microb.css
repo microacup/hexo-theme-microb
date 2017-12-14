@@ -343,6 +343,7 @@ body {
   margin-top: 10px;
   position: relative;
   padding-right: 60px;
+  min-height: 30px;
 }
 .recent-posts .recent-post-item .title {
   line-height: 1.8em;
@@ -546,6 +547,7 @@ body {
   margin-top: 15px;
   margin: 10px auto;
   max-width: 880px;
+  position: relative;
 }
 .post-nav .post-nav-item {
   display: inline-block;
@@ -564,6 +566,8 @@ body {
 }
 .post-nav .post-nav-prev {
   text-align: right;
+  position: absolute;
+  right: 0;
 }
 .post-nav .post-nav-prev a {
   margin-right: 20px;
