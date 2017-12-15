@@ -3,7 +3,7 @@
   <h2><%=page.tag%></h2>
   <% page.posts.each(function(article) { %>
     <div class="tag-item">
-      <time datetime="<%=date_xml(article.date)%>">
+      <time class="time" datetime="<%=date_xml(article.date)%>">
         <%=date(article.date)%>
       </time>
       <% if (article.link) { %>

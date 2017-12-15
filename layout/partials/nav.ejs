@@ -1,14 +1,14 @@
 <nav class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-    <a class="pure-menu-heading" href="/">
+  <ul class="pure-menu-list float-r clearfix">
+    <% Object.keys(theme.menu).forEach(function(key) { %>
+      <li class="pure-menu-item">
+        <a class="pure-menu-link" href="<%=theme.menu[key]%>"><%=__(key)%></a>
+      </li>
+    <% }); %>
+  </ul>  
+  <a class="pure-menu-heading" href="/">
       <h1 class="title"><%=config.title%></h1>
       <!-- <span><%=config.subtitle%></span> -->
-    </a>
-    <img class="logo" id="logo" src="/logo.png" alt="logo">
-    <ul class="pure-menu-list float-r">
-      <% Object.keys(theme.menu).forEach(function(key) { %>
-        <li class="pure-menu-item">
-          <a class="pure-menu-link" href="<%=theme.menu[key]%>"><%=__(key)%></a>
-        </li>
-      <% }); %>
-    </ul>      
-  </nav>
+  </a>
+  <img class="logo" id="logo" src="/logo.png" alt="logo">
+</nav>

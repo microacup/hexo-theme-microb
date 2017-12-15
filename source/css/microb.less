@@ -148,7 +148,14 @@ body {
   .post-page;
   .post-header {
     margin: 10px 0 20px;
+    .title {
+      margin: 1rem;
+    }
+    .time {
+      color: @gray-light;
+    }
   }
+  
   hr {
     width: 10%;
   }
@@ -175,7 +182,7 @@ body {
   }
   .post-content {
     h2, h3, h4, h5, h6 {
-      padding-top: 56px;
+      padding-top: 70px;
       margin-top: -56px;
     }
     .note {
@@ -203,6 +210,10 @@ body {
       &.danger {
         border-left-color: #d9534f;
       }
+    }
+
+    a {
+      color: @light-blue;
     }
   }
   .post-tags {
@@ -305,6 +316,11 @@ body {
   margin-left: 1060px;
   @media screen and (min-width: @xl-width) {
     display: block;
+  }
+
+  ol, ul {
+    list-style: none;
+    padding-left: 1rem;
   }
 }
 

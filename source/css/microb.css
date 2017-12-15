@@ -4,6 +4,10 @@
 * {
   box-sizing: border-box;
 }
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 blockquote,
 body,
 fieldset,
@@ -27,9 +31,12 @@ dl {
 h1 {
   font-size: 1.5rem;
 }
-h2,
+h2 {
+  font-size: 1.25rem;
+}
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: #666;
 }
 h4,
 h5,
@@ -78,6 +85,14 @@ footer {
   margin-top: 1rem!important;
   color: #ccc;
   font-size: 12px;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
@@ -134,6 +149,7 @@ code {
 }
 .highlight .line {
   height: 20px;
+  line-height: 20px;
 }
 .highlight .gutter pre {
   padding: 10px;
@@ -252,11 +268,16 @@ code {
   line-height: 30px;
   display: inline-block;
   height: 30px;
-  margin: 5px 3px;
+  margin: 5px;
   padding: 0 12px;
-  color: #999;
+  color: #555;
   border-radius: 15px;
   background: #f6f6f6;
+  min-width: 50px;
+  text-align: center;
+}
+.tag-button a {
+  color: #555;
 }
 .tag-button:hover {
   color: #555;
@@ -442,6 +463,12 @@ body {
 .post .post-header {
   margin: 10px 0 20px;
 }
+.post .post-header .title {
+  margin: 1rem;
+}
+.post .post-header .time {
+  color: #999;
+}
 .post hr {
   width: 10%;
 }
@@ -470,7 +497,7 @@ body {
 .post .post-content h4,
 .post .post-content h5,
 .post .post-content h6 {
-  padding-top: 56px;
+  padding-top: 70px;
   margin-top: -56px;
 }
 .post .post-content .note {
@@ -498,6 +525,9 @@ body {
 .post .post-content .note.danger {
   border-left-color: #d9534f;
 }
+.post .post-content a {
+  color: #2196F3;
+}
 .post .post-tags {
   text-align: center;
   margin: 20px 0;
@@ -507,11 +537,16 @@ body {
   line-height: 30px;
   display: inline-block;
   height: 30px;
-  margin: 5px 3px;
+  margin: 5px;
   padding: 0 12px;
-  color: #999;
+  color: #555;
   border-radius: 15px;
   background: #f6f6f6;
+  min-width: 50px;
+  text-align: center;
+}
+.post .post-tags .article-tag-list-item a {
+  color: #555;
 }
 .post .post-tags .article-tag-list-item:hover {
   color: #555;
@@ -533,11 +568,16 @@ body {
   line-height: 30px;
   display: inline-block;
   height: 30px;
-  margin: 5px 3px;
+  margin: 5px;
   padding: 0 12px;
-  color: #999;
+  color: #555;
   border-radius: 15px;
   background: #f6f6f6;
+  min-width: 50px;
+  text-align: center;
+}
+.page .tag-list .tag-list-item a {
+  color: #555;
 }
 .page .tag-list .tag-list-item:hover {
   color: #555;
@@ -635,6 +675,11 @@ body {
   .toc-article {
     display: block;
   }
+}
+.toc-article ol,
+.toc-article ul {
+  list-style: none;
+  padding-left: 1rem;
 }
 .disqus-comments {
   display: block;
