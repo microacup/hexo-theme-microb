@@ -393,11 +393,11 @@ body {
 }
 .recent-posts .recent-post-item .title h2 {
   font-size: 1.2rem;
+  font-weight: normal;
 }
 @media screen and (max-width: 576px) {
   .recent-posts .recent-post-item .title h2 {
     font-size: 1rem;
-    font-weight: normal;
   }
 }
 .recent-posts .recent-post-item .title:hover {
