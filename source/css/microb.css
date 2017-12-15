@@ -392,6 +392,7 @@ body {
   line-height: 1.8rem;
 }
 .recent-posts .recent-post-item .title h2 {
+  color: #202020;
   font-size: 1.2rem;
   font-weight: normal;
 }
