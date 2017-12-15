@@ -73,7 +73,7 @@ a:active {
 .float-r {
   float: right;
 }
-rem {
+em {
   color: #FF5722;
   font-weight: bold;
   font-style: normal;
@@ -696,9 +696,14 @@ body {
 .search-result-list {
   margin-top: 10px;
 }
-.search-result-list .search-result-title {
+.search-result-list a.search-result-title {
+  color: #555;
   font-weight: bold;
   font-size: 1.2rem;
+}
+.search-result-list .search-keyword {
+  color: #FF5722;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=microb.css.map */
