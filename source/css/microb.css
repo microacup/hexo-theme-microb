@@ -48,6 +48,9 @@ h6 {
 a {
   color: #555;
 }
+p {
+  margin: 0.75rem 0;
+}
 a:link,
 a:visited,
 a:hover,
@@ -103,30 +106,44 @@ footer {
   background: #64B5F6;
   color: #fff;
 }
+pre,
+code {
+  border-radius: 4px;
+  background-color: #f6f6f6;
+  font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+}
+pre {
+  padding: 10px;
+}
+pre code {
+  padding: 10px;
+}
+code {
+  padding: 5px;
+  font-size: 0.8rem;
+}
 .highlight {
   display: block;
   overflow-x: auto;
   color: #555;
   font-size: 14px;
   border-radius: 2px;
-  background-color: #f7f7f7;
+  background-color: #f6f6f6;
   overflow-y: hidden;
   margin: 20px 0;
 }
 .highlight .line {
   height: 20px;
 }
-.highlight code,
-.highlight pre {
-  font-size: 0.9em;
-  background-color: #f8f8f8;
-  font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
-}
 .highlight .gutter pre {
   padding: 10px;
   color: #869194;
   background-color: #eff2f3;
   text-align: center;
+  overflow: hidden;
+}
+.highlight .code {
+  font-size: 0.8rem;
 }
 .highlight .code pre {
   padding: 10px;
@@ -267,7 +284,7 @@ body {
   color: #555;
   margin: 0;
   font-size: 15px;
-  line-height: 2rem;
+  line-height: 1.8rem;
   font-family: 'Microsoft Yahei UI Light', 'Microsoft YaHei', 'Source Sans Pro', sans-serif;
 }
 .home-menu {
@@ -297,6 +314,8 @@ body {
   display: inline-block;
   vertical-align: middle;
   font-family: '思源宋体', '宋体', '黑体';
+  font-size: 25px;
+  line-height: 40px;
 }
 .home-menu .logo {
   cursor: pointer;
@@ -433,6 +452,9 @@ body {
   border-left: 4px solid #ccc;
   background-color: #efefef;
 }
+.post blockquote p {
+  margin: 0;
+}
 .post table {
   max-width: 100%;
 }
@@ -449,6 +471,9 @@ body {
   margin-bottom: 20px;
   border: 1px solid #eee;
   border-left-width: 5px;
+}
+.post .post-content .note p {
+  margin: 0;
 }
 .post .post-content .note.primary {
   border-left-color: #6f42c1;

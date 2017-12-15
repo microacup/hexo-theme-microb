@@ -1,22 +1,30 @@
+pre, code {
+    border-radius: 4px;
+    background-color: @bg-gray;
+    font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+}
+pre {
+    padding: 10px;
+    code {
+        padding: 10px;
+    }
+}
+code {
+    padding: 5px;
+    font-size: @code-size;
+}
  .highlight {
      display: block;
      overflow-x: auto;
      color: #555;
      font-size: 14px;
      border-radius: 2px;
-     background-color: #f7f7f7;
+     background-color: @bg-gray;
      overflow-y: hidden;
      margin: 20px 0;
     .line {
       height: 20px;
     }
-
-     code,
-     pre {
-         font-size: 0.9em;
-         background-color: #f8f8f8;
-         font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
-     }
      .gutter {
          pre {
              padding: 10px;
@@ -27,6 +35,7 @@
          }
      }
      .code {
+        font-size: @code-size;
          pre {
              padding: 10px;
          }
