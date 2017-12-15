@@ -465,6 +465,14 @@ body {
   max-width: 100%;
   max-height: 1024px;
 }
+.post .post-content h2,
+.post .post-content h3,
+.post .post-content h4,
+.post .post-content h5,
+.post .post-content h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
 .post .post-content .note {
   position: relative;
   padding: 15px;
