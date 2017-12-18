@@ -26,7 +26,7 @@ ol,
 ul,
 dd,
 dl {
-  padding-left: 1.25rem;
+  padding-left: 2rem;
 }
 h1 {
   font-size: 1.5rem;
@@ -466,6 +466,7 @@ body {
 }
 .post .post-header .title {
   margin: 1rem;
+  line-height: 2rem;
 }
 .post .post-header .time {
   color: #999;
