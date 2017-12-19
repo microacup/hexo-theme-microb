@@ -15,6 +15,7 @@ body {
   height: @nav-height;
   padding: @nav-padding;
   border-bottom: 1px solid @border-dark-gray;
+  box-shadow: 0 0 1px 0 rgba(0,0,0,0.1), inset 0 0 0 0 rgba(0,0,0,0.1);
   @media screen and (max-width: @sm-width) {
     padding: @nav-small-padding;
   }
@@ -310,14 +311,16 @@ body {
 
 .toc-article {
   display: none;
-  position: fixed;
-  top: 50px;
-  font-size: 13px;
-  width: 200px;
-  padding: 10px 10px 0 0;
-  margin-left: 1060px;
   @media screen and (min-width: @xl-width) {
     display: block;
+    position: fixed;
+    bottom: 10px;
+    top: 50px;
+    font-size: 13px;
+    width: 200px;
+    padding: 10px 10px 0 0;
+    margin-left: 1060px;
+    overflow-y: scroll;
   }
 
   ol, ul {
