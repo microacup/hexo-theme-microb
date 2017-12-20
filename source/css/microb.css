@@ -36,7 +36,6 @@ h2 {
 }
 h3 {
   font-size: 1.1rem;
-  color: #666;
 }
 h4,
 h5,
@@ -53,7 +52,7 @@ h6 {
   line-height: 1.5rem;
 }
 a {
-  color: #555;
+  color: inherit;
 }
 p {
   margin: 0.75rem 0;
@@ -64,7 +63,6 @@ a:hover,
 a:active {
   outline: none;
   text-decoration: none;
-  color: #555;
 }
 .pr {
   position: absolute !important;
@@ -84,7 +82,7 @@ footer {
   padding-bottom: 1.5rem!important;
   padding-top: 1.5rem!important;
   margin-top: 1rem!important;
-  color: #ccc;
+  color: #555;
   font-size: 12px;
   position: relative;
   z-index: 1024;
@@ -137,7 +135,7 @@ pre code {
   padding: 10px;
 }
 code {
-  padding: 5px;
+  padding: 2px 4px;
   font-size: 0.8rem;
 }
 .highlight {
@@ -297,15 +295,8 @@ code {
     padding: 10px 50px;
   }
 }
-@media screen and (min-width: 880px) {
-  .post-page {
-    border: 1px solid rgba(32, 32, 32, 0.15);
-    border-top: none;
-    box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
-  }
-}
 body {
-  color: #555;
+  color: #202020;
   margin: 0;
   font-size: 15px;
   line-height: 1.8rem;
@@ -328,8 +319,6 @@ body {
   position: relative;
 }
 .home-menu img {
-  width: 32px;
-  height: 32px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -348,14 +337,28 @@ body {
   left: 50%;
   top: 8px;
   margin-left: -16px;
+  width: 34px;
+  height: 34px;
+  padding: 5px;
 }
 @media screen and (max-width: 576px) {
   .home-menu .logo {
     display: none;
   }
 }
+.home-menu .pure-menu-list .menu-icon {
+  width: 18px;
+  height: 18px;
+}
+.home-menu .pure-menu-list .pure-menu-children {
+  border: 1px solid #999;
+}
 .home-menu .pure-menu-list .pure-menu-link {
   padding: 4px 15px;
+  color: inherit;
+}
+.home-menu .pure-menu-list .pure-menu-item.actived {
+  color: #2196F3;
 }
 .container {
   padding-top: 50px;
@@ -373,7 +376,7 @@ body {
   max-width: 800px;
 }
 .recent-posts .recent-post-item {
-  padding: 10px;
+  padding: 15px 10px;
   border-bottom: 1px solid rgba(32, 32, 32, 0.05);
   border-top: none;
 }
@@ -396,7 +399,6 @@ body {
   line-height: 1.8rem;
 }
 .recent-posts .recent-post-item .title h2 {
-  color: #202020;
   font-size: 1.2rem;
   font-weight: normal;
 }
@@ -458,13 +460,6 @@ body {
     padding: 10px 50px;
   }
 }
-@media screen and (min-width: 880px) {
-  .post {
-    border: 1px solid rgba(32, 32, 32, 0.15);
-    border-top: none;
-    box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
-  }
-}
 .post .post-header {
   margin: 10px 0 20px;
 }
@@ -482,8 +477,9 @@ body {
   padding: 1rem;
   margin: 1rem 0;
   padding-left: 20px;
+  border: 1px solid #eee;
   border-left: 4px solid #ccc;
-  background-color: #efefef;
+  color: #555;
 }
 .post blockquote p {
   margin: 0;
@@ -606,13 +602,6 @@ body {
     padding: 10px 50px;
   }
 }
-@media screen and (min-width: 880px) {
-  .tag-page {
-    border: 1px solid rgba(32, 32, 32, 0.15);
-    border-top: none;
-    box-shadow: 0 2px 3px rgba(32, 32, 32, 0.05);
-  }
-}
 .tag-page .tag-item {
   padding: .5rem 0;
 }
@@ -674,25 +663,34 @@ body {
 @media screen and (min-width: 1280px) {
   .toc-article {
     display: block;
+    max-height: calc(100vh - 150px);
     position: fixed;
-    bottom: 10px;
-    top: 50px;
+    top: 60px;
     font-size: 13px;
     width: 200px;
-    padding: 10px 10px 0 0;
-    margin-left: 1060px;
-    overflow-y: scroll;
+    padding: 10px;
+    margin-left: 1040px;
+    overflow-y: auto;
+    border-radius: 4px;
+    background-color: #f0f8ff;
   }
 }
 .toc-article ol,
 .toc-article ul {
   list-style: none;
+  padding-left: 0;
+}
+.toc-article ol ol,
+.toc-article ul ol,
+.toc-article ol ul,
+.toc-article ul ul {
   padding-left: 1rem;
 }
 .disqus-comments {
   display: block;
   margin: 0 auto;
   max-width: 880px;
+  padding: 0 10px;
 }
 .search-content .pure-input {
   border-radius: 2px !important;
@@ -700,12 +698,15 @@ body {
 .search-content .pure-input:focus {
   border-color: #202020 !important;
 }
+.search-content .search-result {
+  color: #999;
+}
 .search-result-list {
   margin-top: 10px;
 }
 .search-result-list a.search-result-title {
-  color: #555;
-  font-weight: bold;
+  color: #202020;
+  font-weight: normal;
   font-size: 1.2rem;
 }
 .search-result-list .search-keyword {
