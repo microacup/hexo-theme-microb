@@ -7,10 +7,10 @@
         </a>
         <ul class="pure-menu-children">
         <% Object.keys(theme.menu).forEach(function(key) { %>
-          <% if (page.title !== key && !(!page.title && key==='home')) { %>
-            <li class="pure-menu-item"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
-          <% } else { %>
+          <% if ((is_home() && key==='home') || (is_archive() && key==='archives') || page.type === key) { %>
             <li class="pure-menu-item actived"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
+          <% } else { %>
+            <li class="pure-menu-item"><a href="<%=theme.menu[key]%>" class="pure-menu-link"><%= __(key)%></a></li>
           <% } %>  
           <% }); %>
       </ul>
