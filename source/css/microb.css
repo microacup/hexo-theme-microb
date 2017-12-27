@@ -538,8 +538,6 @@ body {
 }
 .post-nav .post-nav-prev {
   text-align: right;
-  position: absolute;
-  right: 0;
 }
 .post-nav .post-nav-prev a {
   margin-right: 20px;
@@ -585,7 +583,7 @@ body {
   display: block;
   margin: 0 auto;
   max-width: 880px;
-  padding: 0 10px;
+  padding: 0 15px;
 }
 .search-content .pure-input {
   border-radius: 2px !important;
