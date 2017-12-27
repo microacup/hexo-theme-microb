@@ -122,148 +122,6 @@ footer {
   background: #64B5F6;
   color: #fff;
 }
-pre,
-code {
-  border-radius: 4px;
-  background-color: #f6f6f6;
-  font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
-}
-pre {
-  padding: 10px;
-}
-pre code {
-  padding: 10px;
-}
-code {
-  padding: 2px 4px;
-  font-size: 0.8rem;
-}
-.highlight {
-  display: block;
-  overflow-x: auto;
-  color: #555;
-  font-size: 14px;
-  border-radius: 2px;
-  background-color: #f6f6f6;
-  overflow-y: hidden;
-  margin: 20px 0;
-}
-.highlight .line {
-  height: 20px;
-  line-height: 20px;
-}
-.highlight .gutter pre {
-  padding: 10px;
-  color: #869194;
-  background-color: #eff2f3;
-  text-align: center;
-  overflow: hidden;
-}
-.highlight .code {
-  font-size: 0.8rem;
-}
-.highlight .code pre {
-  padding: 10px;
-}
-.highlight .comment,
-.highlight .meta {
-  color: #b3b3b3;
-}
-.highlight .string,
-.highlight .value,
-.highlight .variable,
-.highlight .template-variable,
-.highlight .strong,
-.highlight .emphasis,
-.highlight .quote,
-.highlight .inheritance,
-.highlight .ruby .symbol,
-.highlight .xml .cdata {
-  color: #1abc9c;
-}
-.highlight .keyword,
-.highlight .selector-tag,
-.highlight .type,
-.highlight .javascript .function {
-  color: #e96900;
-}
-.highlight .preprocessor,
-.highlight .built_in,
-.highlight .params,
-.highlight .constant,
-.highlight .symbol,
-.highlight .bullet,
-.highlight .attribute,
-.highlight .css .hexcolor {
-  color: #1abc9c;
-}
-.highlight .number,
-.highlight .literal {
-  color: #ae81ff;
-}
-.highlight .section,
-.highlight .header,
-.highlight .name,
-.highlight .function,
-.highlight .python .decorator,
-.highlight .python .title,
-.highlight .ruby .function .title,
-.highlight .ruby .title .keyword,
-.highlight .perl .sub,
-.highlight .javascript .title,
-.highlight .coffeescript .title {
-  color: #525252;
-}
-.highlight .tag,
-.highlight .regexp {
-  color: #2973b7;
-}
-.highlight .title,
-.highlight .attr,
-.highlight .selector-id,
-.highlight .selector-class,
-.highlight .selector-attr,
-.highlight .selector-pseudo,
-.highlight .ruby .constant,
-.highlight .xml .tag .title,
-.highlight .xml .pi,
-.highlight .xml .doctype,
-.highlight .html .doctype,
-.highlight .css .id,
-.highlight .css .pseudo,
-.highlight .class,
-.highlight .ruby .class .title {
-  color: #2973b7;
-}
-.highlight .css .code .attribute {
-  color: #e96900;
-}
-.highlight .css .class {
-  color: #525252;
-}
-.highlight .tag .attribute {
-  color: #e96900;
-}
-.highlight .addition {
-  color: #55a532;
-  background-color: #eaffea;
-}
-.highlight .deletion {
-  color: #bd2c00;
-  background-color: #ffecec;
-}
-.highlight .link {
-  text-decoration: underline;
-}
-.highlight .function .keyword {
-  color: #0092db;
-}
-.highlight .function .params {
-  color: #525252;
-}
-.highlight .function .title {
-  color: #525252;
-}
 .tag-button {
   font-size: 12px;
   line-height: 30px;
@@ -501,6 +359,43 @@ body {
 .post .post-content h6 {
   padding-top: 70px;
   margin-top: -56px;
+}
+.post .post-content table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 21px;
+  border: 1px solid #ddd;
+}
+.post .post-content table tr {
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+.post .post-content table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+.post .post-content table th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+  background-color: #f6f8fa;
+}
+.post .post-content table td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+.post .post-content table th:first-child,
+.post .post-content table td:first-child {
+  margin-top: 0;
+}
+.post .post-content table th:last-child,
+.post .post-content table td:last-child {
+  margin-bottom: 0;
 }
 .post .post-content .note {
   position: relative;
@@ -759,6 +654,159 @@ body {
     right: 0;
     top: .5em;
   }
+}
+pre,
+code {
+  background-color: #f6f6f6;
+  font-family: "Source Code Pro", "courier new", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+}
+pre {
+  padding: 10px;
+}
+pre code {
+  padding: 10px;
+}
+code {
+  padding: 2px 4px;
+  font-size: 0.8rem;
+}
+.highlight {
+  display: block;
+  overflow-x: auto;
+  color: #555;
+  font-size: 14px;
+  border-radius: 2px;
+  background-color: #f6f6f6;
+  overflow-y: hidden;
+  margin: 20px 0;
+}
+.highlight table {
+  margin: 0 !important;
+  width: auto !important;
+  border: none !important;
+}
+.highlight table tr {
+  border: none !important;
+}
+.highlight table td {
+  border: none !important;
+  padding: 0 !important;
+}
+.highlight .line {
+  height: 20px;
+  line-height: 20px;
+}
+.highlight .gutter pre {
+  padding: 10px;
+  color: #869194;
+  background-color: #eff2f3;
+  text-align: center;
+  overflow: hidden;
+}
+.highlight .code {
+  font-size: 0.8rem;
+}
+.highlight .code pre {
+  padding: 10px;
+}
+.highlight .comment,
+.highlight .meta {
+  color: #b3b3b3;
+}
+.highlight .string,
+.highlight .value,
+.highlight .variable,
+.highlight .template-variable,
+.highlight .strong,
+.highlight .emphasis,
+.highlight .quote,
+.highlight .inheritance,
+.highlight .ruby .symbol,
+.highlight .xml .cdata {
+  color: #1abc9c;
+}
+.highlight .keyword,
+.highlight .selector-tag,
+.highlight .type,
+.highlight .javascript .function {
+  color: #e96900;
+}
+.highlight .preprocessor,
+.highlight .built_in,
+.highlight .params,
+.highlight .constant,
+.highlight .symbol,
+.highlight .bullet,
+.highlight .attribute,
+.highlight .css .hexcolor {
+  color: #1abc9c;
+}
+.highlight .number,
+.highlight .literal {
+  color: #ae81ff;
+}
+.highlight .section,
+.highlight .header,
+.highlight .name,
+.highlight .function,
+.highlight .python .decorator,
+.highlight .python .title,
+.highlight .ruby .function .title,
+.highlight .ruby .title .keyword,
+.highlight .perl .sub,
+.highlight .javascript .title,
+.highlight .coffeescript .title {
+  color: #525252;
+}
+.highlight .tag,
+.highlight .regexp {
+  color: #2973b7;
+}
+.highlight .title,
+.highlight .attr,
+.highlight .selector-id,
+.highlight .selector-class,
+.highlight .selector-attr,
+.highlight .selector-pseudo,
+.highlight .ruby .constant,
+.highlight .xml .tag .title,
+.highlight .xml .pi,
+.highlight .xml .doctype,
+.highlight .html .doctype,
+.highlight .css .id,
+.highlight .css .pseudo,
+.highlight .class,
+.highlight .ruby .class .title {
+  color: #2973b7;
+}
+.highlight .css .code .attribute {
+  color: #e96900;
+}
+.highlight .css .class {
+  color: #525252;
+}
+.highlight .tag .attribute {
+  color: #e96900;
+}
+.highlight .addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+.highlight .deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+.highlight .link {
+  text-decoration: underline;
+}
+.highlight .function .keyword {
+  color: #0092db;
+}
+.highlight .function .params {
+  color: #525252;
+}
+.highlight .function .title {
+  color: #525252;
 }
 
 /*# sourceMappingURL=microb.css.map */
