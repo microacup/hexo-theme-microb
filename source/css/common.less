@@ -314,16 +314,22 @@ body {
 
 .post-nav {
   display: block;
+  display: flex;
   margin-top: 15px;
   margin: 10px auto;
   max-width: @post-width;
   position: relative;
+  font-size: 0;
+
   .post-nav-item {
     display: inline-block;
     padding: 10px 0 0 0;
-    width: 50%;
+    width: 49.5%;
     vertical-align: top;
     position: relative;
+    flex: 1;
+    font-size: 14px;
+
     span {
       display: inline-block;
       position: absolute;
