@@ -14,8 +14,19 @@ if (is_home()) pageTitle+= config.subtitle;
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#202020"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="keywords" content="<%= config.keywords %>" />
-  <meta name="description" content="<%= config.description %>" />
+  
+  <% if (page.tags && page.tags.length) { %>
+    <meta name="keywords" content="<% page.tags.forEach(function(tag) { %><%= tag.name %>,<% }); %>" />
+  <% } else { %>
+    <meta name="keywords" content="<%= config.keywords %>" />
+  <% } %>
+
+  <% if (config.description) { %>
+    <meta name="description" content="<%= config.description %>" />
+  <% } else {  %>
+    <meta name="description" content="<%= page.description || page.title || (config.title + ',' + config.subtitle) %>" />
+  <% } %>
+  
   <link rel="icon" type="image/x-icon" href="/logo.png">
   <title><%=pageTitle%></title>
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
