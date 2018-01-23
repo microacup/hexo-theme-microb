@@ -4,7 +4,7 @@
     <% page.posts.sort('date', -1).limit(10).each(function(post) { %>
       <article class="recent-post-item">
         <a class="title" href="<%=config.root + post.path%>"><h2><%=post.title%></h2></a>
-        <% if (post.excerpt) { %>
+        <% if (theme.show_excerpt && post.excerpt) { %>
           <div class="post-excerpt">
             <%- post.excerpt %>
           </div>
@@ -18,7 +18,7 @@
             }) %>
           <% } %>
 
-          <% if (post.date) { %>
+          <% if (theme.show_date && post.date) { %>
             <time class="time pr" datetime="<%=post.date.toJSON()%>">
               <%=date(post.date)%>
             </time>

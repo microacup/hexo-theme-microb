@@ -3,10 +3,12 @@
     <h1 class="title">
       <%=page.title%>
     </h1>
+    <% if (theme.show_date && page.date) { %>
     <time class="time" datetime="<%=date_xml(page.date)%>">
       <%=date(page.date)%>
     </time>
-      <hr>
+    <% } %>
+    <hr>
   </header>
   <div class="post-content">
     <%-page.content%>

@@ -1,9 +1,13 @@
 body {
+  // background-color: rgb(82, 86, 89);
   color: @m-black;
-  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+  SimSun, sans-serif;
+  font-weight: 300;
   font-size: 15px;
   line-height: 1.8rem;
-  font-family: 'Microsoft Yahei UI Light', 'Microsoft YaHei', 'Source Sans Pro', sans-serif;
+  margin: 0;
 }
 
 .home-menu {
@@ -29,6 +33,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     font-family: '思源宋体', '宋体', '黑体';
+    font-weight: 700;
     font-size: 25px;
     line-height: 40px;
   }
@@ -77,8 +82,9 @@ body {
   margin: 0 auto;
   max-width: @index-width;
   .recent-post-item {
-    padding: 15px 10px;
-    border-bottom: 1px solid @border-gray;
+    margin: 10px;
+    padding: 10px 0;
+    // border-bottom: 1px solid @border-gray;
     border-top: none;
     .post-excerpt {
       color: @gray-light;
@@ -88,7 +94,6 @@ body {
     }
     .post-footer {
       font-size: 12px;
-      margin-top: 10px;
       position: relative;
       padding-right: 60px;
       min-height: 30px;
@@ -313,6 +318,7 @@ body {
 }
 
 .post-nav {
+  background-color: #fff;
   display: block;
   display: flex;
   font-size: 0;
@@ -324,7 +330,7 @@ body {
     display: inline-block;
     flex: 1;
     font-size: 14px;
-    padding: 10px 0 0 0;
+    padding: 10px 0;
     position: relative;
     vertical-align: top;
     width: 49.5%;
@@ -362,7 +368,7 @@ body {
     font-size: 13px;
     width: 200px;
     padding: 10px;
-    margin-left: 1040px;
+    margin-left: 1050px;
     overflow-y: auto;
     border-radius: 4px;
     background-color: #f0f8ff;
@@ -379,6 +385,7 @@ body {
 }
 
 .disqus-comments {
+  background-color: #fff;
   display: block;
   margin: 0 auto;
   max-width: @post-width;

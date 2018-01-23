@@ -23,3 +23,7 @@ stylesheets:
 scripts:
 #- //cdn.bootcss.com/zepto/1.2.0/zepto.min.js
 #- /js/microb.js
+
+# switch
+show_excerpt: true
+show_date: true
