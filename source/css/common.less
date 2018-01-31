@@ -14,8 +14,7 @@ body {
   background: white;
   height: @nav-height;
   padding: @nav-padding;
-  border-bottom: 1px solid @border-dark-gray;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 0 rgba(0, 0, 0, 0.1);
   @media screen and (max-width: @sm-width) {
     padding: @nav-small-padding;
   }
@@ -43,8 +42,8 @@ body {
     left: 50%;
     top: @logo-top;
     margin-left: -16px;
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
     padding: 5px;
     @media screen and (max-width: @sm-width) {
       display: none;
@@ -61,6 +60,9 @@ body {
     .pure-menu-link {
       padding: 4px 15px;
       color: inherit;
+      &:after {
+        content: ' ';
+      }
     }
     .pure-menu-item.actived {
       color: @light-blue;
