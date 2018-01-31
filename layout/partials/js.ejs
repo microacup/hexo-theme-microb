@@ -59,11 +59,15 @@
      */
     function attachEvent() {
       var old = typeof window.onclick === "function" && window.onclick;
-      document.getElementById("logo").onclick = function(event) {
-        returnTop();
-        old && old();
-        createHeart(event);
+      var logo = document.getElementById("logo");
+      if (logo) {
+        logo.onclick = function(event) {
+          returnTop();
+          old && old();
+          createHeart(event);
+        }
       }
+      
     }
 
     function createHeart(event) {
@@ -98,16 +102,18 @@
 
     function addMenuEvent() {
       var menu = document.getElementById('menu-main-post');
-      var toc = document.getElementById('toc');
-      menu.onclick = function() {
-        if (toc) {
-          if (toc.style.display == 'block') {
-            toc.style.display = 'none';
-          } else {
-            toc.style.display = 'block';
+      if (menu) {
+        var toc = document.getElementById('toc');
+        menu.onclick = function() {
+          if (toc) {
+            if (toc.style.display == 'block') {
+              toc.style.display = 'none';
+            } else {
+              toc.style.display = 'block';
+            }
           }
-        }
-      };
+        };
+      }
     }
 
   })(window, document);
