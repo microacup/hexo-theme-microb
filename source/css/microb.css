@@ -172,7 +172,7 @@ body {
   background: white;
   height: 50px;
   padding: 5px 20px;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px rgba(32, 32, 32, 0.15) solid;
 }
 @media screen and (max-width: 576px) {
   .home-menu {
@@ -207,9 +207,18 @@ body {
   height: 32px;
   padding: 5px;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1280px) {
   .home-menu .logo {
-    display: none;
+    left: auto;
+    right: 10px;
+  }
+}
+.home-menu .pure-menu-list .toc-menu {
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .home-menu .pure-menu-list .toc-menu {
+    display: initial;
   }
 }
 .home-menu .pure-menu-list .menu-icon {
@@ -225,6 +234,9 @@ body {
 }
 .home-menu .pure-menu-list .pure-menu-link:after {
   content: ' ';
+}
+.home-menu .pure-menu-list .pure-menu-link:focus {
+  background-color: #fff;
 }
 .home-menu .pure-menu-list .pure-menu-item.actived {
   color: #2196F3;
@@ -574,7 +586,6 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .toc-article {
-    display: block;
     max-height: calc(100vh - 150px);
     position: fixed;
     top: 60px;

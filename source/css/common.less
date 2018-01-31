@@ -14,7 +14,7 @@ body {
   background: white;
   height: @nav-height;
   padding: @nav-padding;
-  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), inset 0 0 0 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px @border-dark-gray solid;
   @media screen and (max-width: @sm-width) {
     padding: @nav-small-padding;
   }
@@ -45,11 +45,18 @@ body {
     width: 32px;
     height: 32px;
     padding: 5px;
-    @media screen and (max-width: @sm-width) {
-      display: none;
+    @media screen and (max-width: @xl-width) {
+      left: auto;
+      right: 10px;
     }
   }
   .pure-menu-list {
+    .toc-menu {
+      display: none;
+      @media screen and (min-width: @xl-width) {
+        display: initial;
+      }
+    }
     .menu-icon {
       width: 18px;
       height: 18px;
@@ -62,6 +69,9 @@ body {
       color: inherit;
       &:after {
         content: ' ';
+      }
+      &:focus {
+        background-color: #fff;
       }
     }
     .pure-menu-item.actived {
@@ -363,7 +373,6 @@ body {
 .toc-article {
   display: none;
   @media screen and (min-width: @xl-width) {
-    display: block;
     max-height: calc(~"100vh - 150px");
     position: fixed;
     top: 60px;
