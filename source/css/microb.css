@@ -178,6 +178,7 @@ body {
 }
 @media screen and (max-width: 576px) {
   .home-menu {
+    background: white;
     padding: 5px;
   }
 }
