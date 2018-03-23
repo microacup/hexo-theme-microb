@@ -172,10 +172,9 @@ body {
   margin: 0;
 }
 .home-menu {
-  background: white;
+  background: transparent;
   height: 50px;
   padding: 5px 20px;
-  border-bottom: 1px rgba(32, 32, 32, 0.15) solid;
 }
 @media screen and (max-width: 576px) {
   .home-menu {

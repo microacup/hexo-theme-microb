@@ -3,13 +3,13 @@
     <% if (is_post()) { %>
       <li class="pure-menu-item toc-menu">
         <a id="menu-main-post" class="pure-menu-link" href="javascript:;">
-          <img class="menu-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAa0lEQVRYR+2UQQqAUAhE53eFbjoH0Zt2gzBo0a6Q+KHQuBYdHvoGimsU78cVgGQ8hTGzs3d2nwKIgAj0IVAlJJmwzw3Mdnx2ngiIQB8CMmH2b0nuAJY7YhGxuvuWnffmBhRABETgGwK/NeEBkT5AMP4c9MUAAAAASUVORK5CYII=" alt="MENU">
+          <img class="menu-icon" src="/logo.png" alt="MENU">
         </a>
       </li>
     <% } else { %>
       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
         <a id="menu-main" class="pure-menu-link" href="javascript:;">
-          <img class="menu-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAa0lEQVRYR+2UQQqAUAhE53eFbjoH0Zt2gzBo0a6Q+KHQuBYdHvoGimsU78cVgGQ8hTGzs3d2nwKIgAj0IVAlJJmwzw3Mdnx2ngiIQB8CMmH2b0nuAJY7YhGxuvuWnffmBhRABETgGwK/NeEBkT5AMP4c9MUAAAAASUVORK5CYII=" alt="MENU">
+          <img class="menu-icon" src="/logo.png" alt="MENU">
         </a>
         <ul class="pure-menu-children">
         <% Object.keys(theme.menu).forEach(function(key) { %>
@@ -27,7 +27,7 @@
       <h1 class="title"><%=config.title%></h1>
       <!-- <span><%=config.subtitle%></span> -->
   </a>
-  <% if (is_post()) { %>
+  <!-- <% if (is_post()) { %>
   <img class="logo" id="logo" src="/logo.png" alt="logo">
-  <% } %>
+  <% } %> -->
 </nav>

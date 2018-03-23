@@ -104,15 +104,19 @@
       var menu = document.getElementById('menu-main-post');
       if (menu) {
         var toc = document.getElementById('toc');
-        menu.onclick = function() {
-          if (toc) {
-            if (toc.style.display == 'block') {
-              toc.style.display = 'none';
-            } else {
-              toc.style.display = 'block';
+        if (toc) {
+          menu.onclick = function() {
+            if (toc) {
+              if (toc.style.display == 'block') {
+                toc.style.display = 'none';
+              } else {
+                toc.style.display = 'block';
+              }
             }
-          }
-        };
+          };
+        } else {
+          menu.style.display = 'none';
+        }
       }
     }
 
