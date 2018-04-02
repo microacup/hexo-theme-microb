@@ -14,7 +14,11 @@ body {
   background: transparent;
   height: @nav-height;
   padding: @nav-padding;
-  @media screen and (max-width: @sm-width) {
+  display: none;
+  @media screen {
+    display: block;
+  }
+  @media screen and (max-width: @md-width) {
     background: white;
     padding: @nav-small-padding;
   }

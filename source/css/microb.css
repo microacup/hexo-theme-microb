@@ -175,8 +175,14 @@ body {
   background: transparent;
   height: 50px;
   padding: 5px 20px;
+  display: none;
 }
-@media screen and (max-width: 576px) {
+@media screen {
+  .home-menu {
+    display: block;
+  }
+}
+@media screen and (max-width: 1020px) {
   .home-menu {
     background: white;
     padding: 5px;
