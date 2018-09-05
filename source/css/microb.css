@@ -129,11 +129,12 @@ footer {
   background: #f6f6f6;
   min-width: 50px;
   text-align: center;
+  padding: 0 10px;
 }
 .tag-button a {
   padding: 0 12px;
   color: #555;
-  display: block;
+  display: inline-block;
 }
 .tag-button:hover {
   color: #555;
@@ -263,6 +264,9 @@ body {
   padding: 10px 0;
   border-top: none;
 }
+.recent-posts .recent-post-item .post-title {
+  position: relative;
+}
 .recent-posts .recent-post-item .post-excerpt {
   color: #999;
 }
@@ -285,6 +289,8 @@ body {
 }
 .recent-posts .recent-post-item .title {
   line-height: 1.8rem;
+  display: block;
+  padding-right: 64px;
 }
 .recent-posts .recent-post-item .title h2 {
   font-size: 1.2rem;
@@ -314,6 +320,8 @@ body {
   background-color: #efefef;
 }
 .recent-posts .recent-post-item .time {
+  top: 0;
+  font-size: 14px;
   color: #999;
 }
 .page-nav {
@@ -470,11 +478,12 @@ body {
   background: #f6f6f6;
   min-width: 50px;
   text-align: center;
+  padding: 0 10px;
 }
 .post .post-tags .article-tag-list-item a {
   padding: 0 12px;
   color: #555;
-  display: block;
+  display: inline-block;
 }
 .post .post-tags .article-tag-list-item:hover {
   color: #555;
@@ -502,11 +511,12 @@ body {
   background: #f6f6f6;
   min-width: 50px;
   text-align: center;
+  padding: 0 10px;
 }
 .page .tag-list .tag-list-item a {
   padding: 0 12px;
   color: #555;
-  display: block;
+  display: inline-block;
 }
 .page .tag-list .tag-list-item:hover {
   color: #555;
@@ -695,6 +705,9 @@ body {
 .footer .footer-link:last-child:after {
   display: none;
 }
+.photos .photo {
+  margin-bottom: 12px;
+}
 pre,
 code {
   font-family: "Source Code Pro", "courier new", "微软雅黑", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
@@ -719,7 +732,7 @@ pre code {
   font-size: 14px;
   border-radius: 2px;
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
-  background-color: #fcfcf8;
+  background-color: #f3f5f6;
   overflow-y: hidden;
   margin: 20px 0;
   position: relative;
@@ -744,14 +757,14 @@ pre code {
   padding: 0 6px;
   font-size: 12px;
   font-weight: 500;
-  background: #f4efe1;
+  background: #e6e9ea;
   content: "Code";
   color: #708090;
   height: 28px;
 }
 .highlight pre,
 .highlight code {
-  background-color: #fcfcf8;
+  background-color: #f3f5f6;
 }
 .highlight .line {
   height: 20px;

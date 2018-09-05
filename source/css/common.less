@@ -104,6 +104,10 @@ body {
     margin: 10px;
     padding: 10px 0;
     border-top: none;
+    .post-title {
+      position: relative;
+    }
+
     .post-excerpt {
       color: @gray-light;
       @media screen and (max-width: @sm-width) {
@@ -124,6 +128,8 @@ body {
     }
     .title {
       line-height: 1.8rem;
+      display: block;
+      padding-right: 64px;
       h2 {
         font-size: 1.2rem;
         font-weight: normal;
@@ -151,6 +157,8 @@ body {
       }
     }
     .time {
+      top: 0;
+      font-size: 14px;
       color: @gray-light;
     }
   }
@@ -493,4 +501,11 @@ body {
       }
     }
   }
+}
+
+.photos {
+  .photo {
+    margin-bottom: 12px;
+  }
+
 }

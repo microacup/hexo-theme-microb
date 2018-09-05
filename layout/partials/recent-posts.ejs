@@ -1,30 +1,46 @@
-
 <% if (page.posts.length > 0) { %>
-  <div class="recent-posts">
-    <% page.posts.sort('date', -1).limit(10).each(function(post) { %>
-      <article class="recent-post-item">
-        <a class="title" href="<%=config.root + post.path%>"><h2><%=post.title%></h2></a>
-        <% if (theme.show_excerpt && post.excerpt) { %>
-          <div class="post-excerpt">
-            <%- post.excerpt %>
-          </div>
-        <% } %>
-        
-        <div class="post-footer">
-          <% if (post.tags) { %>
-            <%- list_tags(post.tags, {
+<div class="recent-posts">
+  <% page.posts.sort('date', -1).limit(10).each(function(post) { %>
+  <article class="recent-post-item">
+    <!-- post-title -->
+    <div class="post-title">
+      <a class="title" href="<%=config.root + post.path%>">
+        <h2>
+          <%- post.title || theme.default_post_title || "Untitled" %>
+        </h2>
+      </a>
+
+      <% if ((!post.tags || post.tags.length == 0)  && theme.show_date && post.date) { %>
+      <time class="time pr" datetime="<%=post.date.toJSON()%>">
+        <%=date(post.date)%>
+      </time>
+      <% } %>
+    </div>
+
+    <!-- post-excerpt -->
+    <% if (theme.show_excerpt && post.excerpt) { %>
+    <div class="post-excerpt">
+      <%- post.excerpt %>
+    </div>
+    <% } %>
+
+    <!-- post-footer -->
+    <div class="post-footer">
+      <% if (post.tags && post.tags.length > 0) { %>
+      <%- list_tags(post.tags, {
               show_count: false,
               class: 'index-tag'
             }) %>
-          <% } %>
 
-          <% if (theme.show_date && post.date) { %>
-            <time class="time pr" datetime="<%=post.date.toJSON()%>">
-              <%=date(post.date)%>
-            </time>
-          <% } %>
-        </div>
-      </article>
-    <% }); %>
-  </div>
+      <% if (theme.show_date && post.date) { %>
+      <time class="time pr" datetime="<%=post.date.toJSON()%>">
+        <%=date(post.date)%>
+      </time>
+      <% } %>
+      <% } %>
+    </div>
+
+  </article>
+  <% }); %>
+</div>
 <% } %>
