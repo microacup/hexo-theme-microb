@@ -25,5 +25,10 @@ scripts:
 #- /js/microb.js
 
 # switch
-show_excerpt: true
+show_excerpt: false
 show_date: true
+
+# links
+links:
+  Hexo: http://hexo.io
+  Theme microb: https://github.com/microacup/hexo-theme-micorb

@@ -104,29 +104,19 @@ footer {
 /* 设置滚动条的样式 */
 ::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 /* 滚动槽 */
 ::-webkit-scrollbar-track {
-  border-radius: 10px;
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 4px;
 }
 /* 滚动条滑块 */
 ::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0, 0, 0, 0.3);
-  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1);
-}
-::-moz-selection {
-  background: #64B5F6;
-  color: #fff;
-}
-::selection {
-  background: #64B5F6;
-  color: #fff;
 }
 .tag-button {
   font-size: 12px;
@@ -134,7 +124,6 @@ footer {
   display: inline-block;
   height: 30px;
   margin: 5px;
-  padding: 0 12px;
   color: #555;
   border-radius: 15px;
   background: #f6f6f6;
@@ -142,7 +131,9 @@ footer {
   text-align: center;
 }
 .tag-button a {
+  padding: 0 12px;
   color: #555;
+  display: block;
 }
 .tag-button:hover {
   color: #555;
@@ -151,13 +142,13 @@ footer {
 .post-page {
   background-color: #fff;
   margin: 0 auto;
-  max-width: 880px;
-  padding: 10px;
+  max-width: 920px;
+  padding: 0 10px;
   position: relative;
 }
 @media screen and (min-width: 576px) {
   .post-page {
-    padding: 10px 50px;
+    padding: 0 60px;
   }
 }
 html,
@@ -242,13 +233,15 @@ body {
   color: inherit;
 }
 .home-menu .pure-menu-list .pure-menu-link:after {
-  content: ' ';
+  content: '';
+  display: inline;
+  vertical-align: middle;
 }
 .home-menu .pure-menu-list .pure-menu-link:focus {
   background-color: #fff;
 }
 .home-menu .pure-menu-list .pure-menu-item.actived {
-  color: #2196F3;
+  color: #2196f3;
 }
 .container {
   padding-top: 60px;
@@ -279,10 +272,16 @@ body {
   }
 }
 .recent-posts .recent-post-item .post-footer {
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   padding-right: 60px;
   min-height: 30px;
+}
+.recent-posts .recent-post-item .post-footer a {
+  font-weight: 300;
+  display: block;
+  padding: 2px 6px;
+  line-height: 1rem;
 }
 .recent-posts .recent-post-item .title {
   line-height: 1.8rem;
@@ -297,7 +296,7 @@ body {
   }
 }
 .recent-posts .recent-post-item .title:hover {
-  color: #2196F3;
+  color: #2196f3;
 }
 .recent-posts .recent-post-item .index-tag-list {
   display: inline;
@@ -306,11 +305,10 @@ body {
 .recent-posts .recent-post-item .index-tag-list .index-tag-list-item {
   margin-right: 5px;
   color: #999;
-  padding: 2px 5px;
-  background-color: #f6f6f6;
   border-radius: 2px;
-  display: inline;
+  display: inline-block;
   list-style: none;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 .recent-posts .recent-post-item .index-tag-list .index-tag-list-item:hover {
   background-color: #efefef;
@@ -341,13 +339,13 @@ body {
 .post {
   background-color: #fff;
   margin: 0 auto;
-  max-width: 880px;
-  padding: 10px;
+  max-width: 920px;
+  padding: 0 10px;
   position: relative;
 }
 @media screen and (min-width: 576px) {
   .post {
-    padding: 10px 50px;
+    padding: 0 60px;
   }
 }
 .post .post-header {
@@ -455,7 +453,7 @@ body {
   border-left-color: #d9534f;
 }
 .post .post-content a {
-  color: #2196F3;
+  color: #2196f3;
 }
 .post .post-tags {
   text-align: center;
@@ -467,7 +465,6 @@ body {
   display: inline-block;
   height: 30px;
   margin: 5px;
-  padding: 0 12px;
   color: #555;
   border-radius: 15px;
   background: #f6f6f6;
@@ -475,14 +472,16 @@ body {
   text-align: center;
 }
 .post .post-tags .article-tag-list-item a {
+  padding: 0 12px;
   color: #555;
+  display: block;
 }
 .post .post-tags .article-tag-list-item:hover {
   color: #555;
   background: #efefef;
 }
 .page {
-  max-width: 880px;
+  max-width: 920px;
   border: none;
   box-shadow: none;
 }
@@ -498,7 +497,6 @@ body {
   display: inline-block;
   height: 30px;
   margin: 5px;
-  padding: 0 12px;
   color: #555;
   border-radius: 15px;
   background: #f6f6f6;
@@ -506,7 +504,9 @@ body {
   text-align: center;
 }
 .page .tag-list .tag-list-item a {
+  padding: 0 12px;
   color: #555;
+  display: block;
 }
 .page .tag-list .tag-list-item:hover {
   color: #555;
@@ -519,15 +519,15 @@ body {
 .tag-page {
   background-color: #fff;
   margin: 0 auto;
-  max-width: 880px;
-  padding: 10px;
+  max-width: 920px;
+  padding: 0 10px;
   position: relative;
   border: none !important;
   box-shadow: none !important;
 }
 @media screen and (min-width: 576px) {
   .tag-page {
-    padding: 10px 50px;
+    padding: 0 60px;
   }
 }
 .tag-page .tag-item {
@@ -554,8 +554,8 @@ body {
   display: flex;
   font-size: 0;
   margin: 10px auto;
-  max-width: 880px;
-  padding: 0 10px;
+  max-width: 920px;
+  padding: 0 60px;
   position: relative;
 }
 .post-nav .post-nav-item {
@@ -568,22 +568,15 @@ body {
   vertical-align: top;
   width: 49.5%;
 }
-.post-nav .post-nav-item span {
-  display: inline-block;
-  position: absolute;
-}
 .post-nav .post-nav-item a {
-  margin-left: 20px;
   display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
 .post-nav .post-nav-prev {
   text-align: right;
-}
-.post-nav .post-nav-prev a {
-  margin-right: 20px;
-}
-.post-nav .post-nav-prev span {
-  right: 0;
 }
 @media screen and (max-width: 576px) {
   .post-nav {
@@ -595,7 +588,7 @@ body {
 }
 @media screen and (min-width: 1280px) {
   .toc-article {
-    max-height: calc(100vh - 150px);
+    max-height: calc(100vh - 80px);
     position: fixed;
     top: 60px;
     font-size: 13px;
@@ -604,7 +597,8 @@ body {
     margin-left: 1050px;
     overflow-y: auto;
     border-radius: 4px;
-    background-color: #f0f8ff;
+    color: white;
+    background-color: #555;
   }
 }
 .toc-article ol,
@@ -622,7 +616,7 @@ body {
   background-color: #fff;
   display: block;
   margin: 0 auto;
-  max-width: 880px;
+  max-width: 920px;
   padding: 0 15px;
 }
 .search-content .pure-input {
@@ -643,7 +637,7 @@ body {
   font-size: 1.2rem;
 }
 .search-result-list .search-keyword {
-  color: #FF5722;
+  color: #ff5722;
   font-weight: bold;
 }
 .archives .archive-year-wrap {
@@ -693,11 +687,24 @@ body {
     top: .5em;
   }
 }
+.footer .footer-link:after {
+  content: "|";
+  display: inline;
+  margin: 0 5px;
+}
+.footer .footer-link:last-child:after {
+  display: none;
+}
 pre,
 code {
-  background-color: #f6f6f6;
   font-family: "Source Code Pro", "courier new", "微软雅黑", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
   font-weight: normal;
+}
+code {
+  padding: 2px;
+  font-size: 14px;
+  border-radius: 2px;
+  color: #fb7299;
 }
 pre {
   padding: 10px;
@@ -705,24 +712,22 @@ pre {
 pre code {
   padding: 10px;
 }
-code {
-  padding: 2px 4px;
-  font-size: 14px;
-}
 .highlight {
   display: block;
   overflow-x: auto;
   color: #555;
   font-size: 14px;
   border-radius: 2px;
-  background-color: #f6f6f6;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  background-color: #fcfcf8;
   overflow-y: hidden;
   margin: 20px 0;
+  position: relative;
 }
 .highlight table {
   margin: 0 !important;
-  width: auto !important;
   border: none !important;
+  position: relative;
 }
 .highlight table tr {
   border: none !important;
@@ -730,6 +735,23 @@ code {
 .highlight table td {
   border: none !important;
   padding: 0 !important;
+}
+.highlight table:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 0 6px;
+  font-size: 12px;
+  font-weight: 500;
+  background: #f4efe1;
+  content: "Code";
+  color: #708090;
+  height: 28px;
+}
+.highlight pre,
+.highlight code {
+  background-color: #fcfcf8;
 }
 .highlight .line {
   height: 20px;
@@ -746,7 +768,7 @@ code {
   font-size: 14px;
 }
 .highlight .code pre {
-  padding: 10px;
+  padding: 38px 10px 10px;
 }
 .highlight .comment,
 .highlight .meta {
@@ -842,10 +864,200 @@ code {
   color: #0092db;
 }
 .highlight .function .params {
-  color: #525252;
+  color: #808080;
 }
 .highlight .function .title {
   color: #525252;
+  font-weight: 500;
+}
+.highlight.html > table::after {
+  content: "HTML";
+}
+.highlight.html > figcaption > span::after {
+  content: " · HTML";
+}
+.highlight.html figcaption + table::after {
+  display: none;
+}
+.highlight.javascript > table::after {
+  content: "JavaScript";
+}
+.highlight.javascript > figcaption > span::after {
+  content: " · JavaScript";
+}
+.highlight.javascript figcaption + table::after {
+  display: none;
+}
+.highlight.bash > table::after {
+  content: "Bash";
+}
+.highlight.bash > figcaption > span::after {
+  content: " · Bash";
+}
+.highlight.bash figcaption + table::after {
+  display: none;
+}
+.highlight.css > table::after {
+  content: "CSS";
+}
+.highlight.css > figcaption > span::after {
+  content: " · CSS";
+}
+.highlight.css figcaption + table::after {
+  display: none;
+}
+.highlight.scss > table::after {
+  content: "Scss";
+}
+.highlight.scss > figcaption > span::after {
+  content: " · Scss";
+}
+.highlight.scss figcaption + table::after {
+  display: none;
+}
+.highlight.java > table::after {
+  content: "Java";
+}
+.highlight.java > figcaption > span::after {
+  content: " · Java";
+}
+.highlight.java figcaption + table::after {
+  display: none;
+}
+.highlight.xml > table::after {
+  content: "XML";
+}
+.highlight.xml > figcaption > span::after {
+  content: " · XML";
+}
+.highlight.xml figcaption + table::after {
+  display: none;
+}
+.highlight.python > table::after {
+  content: "Python";
+}
+.highlight.python > figcaption > span::after {
+  content: " · Python";
+}
+.highlight.python figcaption + table::after {
+  display: none;
+}
+.highlight.javascripton > table::after {
+  content: "JSON";
+}
+.highlight.javascripton > figcaption > span::after {
+  content: " · JSON";
+}
+.highlight.javascripton figcaption + table::after {
+  display: none;
+}
+.highlight.swift > table::after {
+  content: "Swift";
+}
+.highlight.swift > figcaption > span::after {
+  content: " · Swift";
+}
+.highlight.swift figcaption + table::after {
+  display: none;
+}
+.highlight.ruby > table::after {
+  content: "Ruby";
+}
+.highlight.ruby > figcaption > span::after {
+  content: " · Ruby";
+}
+.highlight.ruby figcaption + table::after {
+  display: none;
+}
+.highlight.php > table::after {
+  content: "PHP";
+}
+.highlight.php > figcaption > span::after {
+  content: " · PHP";
+}
+.highlight.php figcaption + table::after {
+  display: none;
+}
+.highlight.c > table::after {
+  content: "C";
+}
+.highlight.c > figcaption > span::after {
+  content: " · C";
+}
+.highlight.c figcaption + table::after {
+  display: none;
+}
+.highlight.cpp > table::after {
+  content: "C++";
+}
+.highlight.cpp > figcaption > span::after {
+  content: " · C++";
+}
+.highlight.cpp figcaption + table::after {
+  display: none;
+}
+.highlight.scheme > table::after {
+  content: "Scheme";
+}
+.highlight.scheme > figcaption > span::after {
+  content: " · Scheme";
+}
+.highlight.scheme figcaption + table::after {
+  display: none;
+}
+.highlight.objectivec > table::after {
+  content: "Objective-C";
+}
+.highlight.objectivec > figcaption > span::after {
+  content: " · Objective-C";
+}
+.highlight.objectivec figcaption + table::after {
+  display: none;
+}
+.highlight.yml > table::after {
+  content: "YAML";
+}
+.highlight.yml > figcaption > span::after {
+  content: " · YAML";
+}
+.highlight.yml figcaption + table::after {
+  display: none;
+}
+.highlight.stylus > table::after {
+  content: "Stylus";
+}
+.highlight.stylus > figcaption > span::after {
+  content: " · Stylus";
+}
+.highlight.stylus figcaption + table::after {
+  display: none;
+}
+.highlight.sql > table::after {
+  content: "SQL";
+}
+.highlight.sql > figcaption > span::after {
+  content: " · SQL";
+}
+.highlight.sql figcaption + table::after {
+  display: none;
+}
+.highlight.http > table::after {
+  content: "HTTP";
+}
+.highlight.http > figcaption > span::after {
+  content: " · HTTP";
+}
+.highlight.http figcaption + table::after {
+  display: none;
+}
+.highlight.go > table::after {
+  content: "Go";
+}
+.highlight.go > figcaption > span::after {
+  content: " · Go";
+}
+.highlight.go figcaption + table::after {
+  display: none;
 }
 
 /*# sourceMappingURL=microb.css.map */

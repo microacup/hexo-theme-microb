@@ -1,8 +1,15 @@
 pre,
 code {
-  background-color: @bg-gray;
-  font-family: "Source Code Pro", "courier new","微软雅黑", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+  font-family: "Source Code Pro", "courier new", "微软雅黑", "Input Mono",
+    "PT Mono", Consolas, Monaco, Menlo, monospace;
   font-weight: normal;
+}
+
+code {
+  padding: 2px;
+  font-size: @code-size;
+  border-radius: 2px;
+  color: @color-pink;
 }
 
 pre {
@@ -12,24 +19,21 @@ pre {
   }
 }
 
-code {
-  padding: 2px 4px;
-  font-size: @code-size;
-}
-
 .highlight {
   display: block;
   overflow-x: auto;
   color: #555;
   font-size: 14px;
   border-radius: 2px;
-  background-color: @bg-gray;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  background-color: @bg-code;
   overflow-y: hidden;
   margin: 20px 0;
+  position: relative;
   table {
     margin: 0 !important;
-    width: auto !important;
     border: none !important;
+    position: relative;
     tr {
       border: none !important;
     }
@@ -37,7 +41,27 @@ code {
       border: none !important;
       padding: 0 !important;
     }
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      padding: 0 6px;
+      font-size: 12px;
+      font-weight: 500;
+      background: #f4efe1;
+      content: "Code";
+      color: #708090;
+      height: 28px;
+    }
   }
+
+  pre,
+  code {
+    background-color: @bg-code;
+  }
+
   .line {
     height: 20px;
     line-height: 20px;
@@ -54,7 +78,7 @@ code {
   .code {
     font-size: @code-size;
     pre {
-      padding: 10px;
+      padding: 38px 10px 10px;
     }
   }
   .comment,
@@ -152,10 +176,202 @@ code {
       color: #0092db;
     }
     .params {
-      color: #525252;
+      color: #808080;
     }
     .title {
       color: #525252;
+      font-weight: 500;
     }
+  }
+}
+.highlight {
+  &.html > table::after {
+    content: "HTML";
+  }
+  &.html > figcaption > span::after {
+    content: " · HTML";
+  }
+  &.html figcaption + table::after {
+    display: none;
+  }
+  &.javascript > table::after {
+    content: "JavaScript";
+  }
+  &.javascript > figcaption > span::after {
+    content: " · JavaScript";
+  }
+  &.javascript figcaption + table::after {
+    display: none;
+  }
+  &.bash > table::after {
+    content: "Bash";
+  }
+  &.bash > figcaption > span::after {
+    content: " · Bash";
+  }
+  &.bash figcaption + table::after {
+    display: none;
+  }
+  &.css > table::after {
+    content: "CSS";
+  }
+  &.css > figcaption > span::after {
+    content: " · CSS";
+  }
+  &.css figcaption + table::after {
+    display: none;
+  }
+  &.scss > table::after {
+    content: "Scss";
+  }
+  &.scss > figcaption > span::after {
+    content: " · Scss";
+  }
+  &.scss figcaption + table::after {
+    display: none;
+  }
+  &.java > table::after {
+    content: "Java";
+  }
+  &.java > figcaption > span::after {
+    content: " · Java";
+  }
+  &.java figcaption + table::after {
+    display: none;
+  }
+  &.xml > table::after {
+    content: "XML";
+  }
+  &.xml > figcaption > span::after {
+    content: " · XML";
+  }
+  &.xml figcaption + table::after {
+    display: none;
+  }
+  &.python > table::after {
+    content: "Python";
+  }
+  &.python > figcaption > span::after {
+    content: " · Python";
+  }
+  &.python figcaption + table::after {
+    display: none;
+  }
+  &.javascripton > table::after {
+    content: "JSON";
+  }
+  &.javascripton > figcaption > span::after {
+    content: " · JSON";
+  }
+  &.javascripton figcaption + table::after {
+    display: none;
+  }
+  &.swift > table::after {
+    content: "Swift";
+  }
+  &.swift > figcaption > span::after {
+    content: " · Swift";
+  }
+  &.swift figcaption + table::after {
+    display: none;
+  }
+  &.ruby > table::after {
+    content: "Ruby";
+  }
+  &.ruby > figcaption > span::after {
+    content: " · Ruby";
+  }
+  &.ruby figcaption + table::after {
+    display: none;
+  }
+  &.php > table::after {
+    content: "PHP";
+  }
+  &.php > figcaption > span::after {
+    content: " · PHP";
+  }
+  &.php figcaption + table::after {
+    display: none;
+  }
+  &.c > table::after {
+    content: "C";
+  }
+  &.c > figcaption > span::after {
+    content: " · C";
+  }
+  &.c figcaption + table::after {
+    display: none;
+  }
+  &.cpp > table::after {
+    content: "C++";
+  }
+  &.cpp > figcaption > span::after {
+    content: " · C++";
+  }
+  &.cpp figcaption + table::after {
+    display: none;
+  }
+  &.scheme > table::after {
+    content: "Scheme";
+  }
+  &.scheme > figcaption > span::after {
+    content: " · Scheme";
+  }
+  &.scheme figcaption + table::after {
+    display: none;
+  }
+  &.objectivec > table::after {
+    content: "Objective-C";
+  }
+  &.objectivec > figcaption > span::after {
+    content: " · Objective-C";
+  }
+  &.objectivec figcaption + table::after {
+    display: none;
+  }
+  &.yml > table::after {
+    content: "YAML";
+  }
+  &.yml > figcaption > span::after {
+    content: " · YAML";
+  }
+  &.yml figcaption + table::after {
+    display: none;
+  }
+  &.stylus > table::after {
+    content: "Stylus";
+  }
+  &.stylus > figcaption > span::after {
+    content: " · Stylus";
+  }
+  &.stylus figcaption + table::after {
+    display: none;
+  }
+  &.sql > table::after {
+    content: "SQL";
+  }
+  &.sql > figcaption > span::after {
+    content: " · SQL";
+  }
+  &.sql figcaption + table::after {
+    display: none;
+  }
+  &.http > table::after {
+    content: "HTTP";
+  }
+  &.http > figcaption > span::after {
+    content: " · HTTP";
+  }
+  &.http figcaption + table::after {
+    display: none;
+  }
+  &.go > table::after {
+    content: "Go";
+  }
+  &.go > figcaption > span::after {
+    content: " · Go";
+  }
+  &.go figcaption + table::after {
+    display: none;
   }
 }
