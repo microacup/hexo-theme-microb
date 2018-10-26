@@ -4,7 +4,7 @@ A very simple Hexo theme.
 
 一个超级简单的Hexo主题。
 
-[Demo](http://blog.meiqiu.me)
+[Demo](https://blog.meiqiu.me)
 
 - 速度至上
 - 简洁
