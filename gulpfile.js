@@ -8,12 +8,8 @@ var uglify = require('gulp-uglify');
 var LessAutoprefix = require('less-plugin-autoprefix');
 var autoprefix = new LessAutoprefix({ browsers: ['last 2 versions'] });
 
-gulp.task('default', ['less'], function() {
-  gulp.watch('./source/css/*.less', ['less']);
-});
-
-gulp.task('less', function() {
-  return gulp.src('./source/css/microb.less')
+gulp.task('less', function(done) {
+  gulp.src('./source/css/microb.less')
     .pipe(sourcemaps.init())
     .pipe(less({
       plugins: [autoprefix]
@@ -21,14 +17,19 @@ gulp.task('less', function() {
     .on('error', console.error.bind(console))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./source/css'));
+    done();
 });
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function(done) {
   var files = [
     './source/js/microb.js',
   ];
 
-  return gulp.src(files)
+  gulp.src(files)
     .pipe(uglify())
     .pipe(gulp.dest('./source/js'));
+  done();
 });
+
+gulp.task('default', gulp.series('less'));
+gulp.watch('./source/css/*.less', gulp.series('less'));

@@ -3,7 +3,7 @@
       <div class="post-nav-item post-nav-next">
         <% if (page.next){ %>
           <a href="<%= url_for(page.next.path) %>" rel="next" title="<%= page.next.title %>">
-            <span>〈 </span> <%= page.next.title %>
+            <span>〈 </span> <%= page.next.title  || "Untitled"  %>
           </a>
         <% } %>
       </div>
@@ -11,7 +11,7 @@
       <div class="post-nav-item post-nav-prev">
         <% if (page.prev){ %>
           <a href="<%= url_for(page.prev.path) %>" rel="prev" title="<%= page.prev.title %>">
-            <%= page.prev.title %> <span>〉</span>
+            <%= page.prev.title  || "Untitled"  %> <span>〉</span>
           </a>
         <% } %>
       </div>
