@@ -160,7 +160,7 @@ html,
 body {
   font-size: 16px;
   font-weight: 300;
-  font-family: "Microsoft Yahei", "Helvetica Neue", "PingFang SC", Arial, "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Fira Code", "Source Han Serif SC", "SimSun", "Microsoft Yahei", "Helvetica Neue", "PingFang SC", sans-serif;
 }
 body {
   color: #202020;
@@ -203,7 +203,7 @@ body {
   margin: 0 5px;
   display: inline-block;
   vertical-align: middle;
-  font-family: '思源宋体', '宋体', '黑体';
+  font-family: "思源宋体", "宋体", "黑体";
   font-weight: 700;
   font-size: 25px;
   line-height: 40px;
@@ -244,7 +244,7 @@ body {
   color: inherit;
 }
 .home-menu .pure-menu-list .pure-menu-link:after {
-  content: '';
+  content: "";
   display: inline;
   vertical-align: middle;
 }
@@ -375,6 +375,7 @@ body {
 }
 .post .post-header .time {
   color: #999;
+  font-size: 14px;
 }
 .post hr {
   width: 10%;
@@ -508,7 +509,7 @@ body {
   width: 10%;
 }
 .page li {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
 }
 .page .tag-list .tag-list-item {
   font-size: 12px;
@@ -551,7 +552,7 @@ body {
   }
 }
 .tag-page .tag-item {
-  padding: .5rem 0;
+  padding: 0.5rem 0;
 }
 .tag-page .tag-item time {
   color: #999;
@@ -672,8 +673,8 @@ body {
 .archives .archive {
   border-left: 2px solid #ccc;
   position: relative;
-  padding: .5rem 0;
-  padding-left: 1rem!important;
+  padding: 0.5rem 0;
+  padding-left: 1rem !important;
 }
 .archives .archive:before {
   position: absolute;
@@ -694,7 +695,7 @@ body {
 }
 .archives .archive .date {
   color: #666;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 0.7rem;
   font-weight: 300;
@@ -704,7 +705,7 @@ body {
   .archives .archive .date {
     position: absolute;
     right: 0;
-    top: .5em;
+    top: 0.5em;
   }
 }
 .footer .footer-link:after {
@@ -724,7 +725,7 @@ body {
 }
 pre,
 code {
-  font-family: "Source Code Pro", "courier new", "微软雅黑", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
+  font-family: "Fira Code", "Noto Mono", "Source Code Pro", "courier new", "微软雅黑", "Input Mono", "PT Mono", Consolas, Monaco, Menlo, monospace;
   font-weight: normal;
 }
 code {

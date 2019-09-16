@@ -1,7 +1,9 @@
-html, body {
-  font-size: 16px;
+html,
+body {
+  font-size: @font-size;
   font-weight: 300;
-  font-family: "Microsoft Yahei","Helvetica Neue","PingFang SC",Arial,"Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+  font-family: "Fira Code", "Source Han Serif SC", "SimSun", "Microsoft Yahei",
+    "Helvetica Neue", "PingFang SC", sans-serif;
 }
 body {
   color: @m-black;
@@ -40,7 +42,7 @@ body {
     margin: 0 5px;
     display: inline-block;
     vertical-align: middle;
-    font-family: '思源宋体', '宋体', '黑体';
+    font-family: "思源宋体", "宋体", "黑体";
     font-weight: 700;
     font-size: 25px;
     line-height: 40px;
@@ -77,7 +79,7 @@ body {
       padding: 4px 15px;
       color: inherit;
       &:after {
-        content: '';
+        content: "";
         display: inline;
         vertical-align: middle;
       }
@@ -155,7 +157,7 @@ body {
         border-radius: 2px;
         display: inline-block;
         list-style: none;
-        border: 1px solid rgba(0,0,0,.06);
+        border: 1px solid rgba(0, 0, 0, 0.06);
         &:hover {
           background-color: @bg-gray-hover;
         }
@@ -200,6 +202,7 @@ body {
     }
     .time {
       color: @gray-light;
+      font-size: 14px;
     }
   }
   hr {
@@ -318,7 +321,7 @@ body {
     width: 10%;
   }
   li {
-    padding: .25rem 0;
+    padding: 0.25rem 0;
   }
   .tag-list {
     .tag-list-item {
@@ -336,7 +339,7 @@ body {
   border: none !important;
   box-shadow: none !important;
   .tag-item {
-    padding: .5rem 0;
+    padding: 0.5rem 0;
     time {
       color: @gray-light;
       font-size: 12px;
@@ -457,8 +460,8 @@ body {
   .archive {
     border-left: 2px solid #ccc;
     position: relative;
-    padding: .5rem 0;
-    padding-left: 1rem!important;
+    padding: 0.5rem 0;
+    padding-left: 1rem !important;
     &:before {
       position: absolute;
       top: 1rem;
@@ -478,7 +481,7 @@ body {
     }
     .date {
       color: #666;
-      font-family: 'Montserrat', sans-serif;
+      font-family: "Montserrat", sans-serif;
       text-transform: uppercase;
       font-size: 0.7rem;
       font-weight: 300;
@@ -486,7 +489,7 @@ body {
       @media screen and (min-width: 476px) {
         position: absolute;
         right: 0;
-        top: .5em;
+        top: 0.5em;
       }
     }
   }
@@ -497,9 +500,9 @@ body {
     &:after {
       content: "|";
       display: inline;
-      margin:  0 5px;
+      margin: 0 5px;
     }
-    
+
     &:last-child {
       &:after {
         display: none;
@@ -512,7 +515,6 @@ body {
   .photo {
     margin-bottom: 12px;
   }
-
 }
 
 .video-container {
